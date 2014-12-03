@@ -1,25 +1,51 @@
-# Ember-foundation
+ember-foundation
+================
 
-This README outlines the details of collaborating on this Ember addon.
+Ember Addon for Zurb Foundation 5 library and Ember components
 
-## Installation
+***Warning*: This is an ember-addon library that is in heavy development! Use at your own risk.**
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+## Install & Setup
 
-## Running
+Within an ember-cli app, run:
 
-* `ember server`
-* Visit your app at http://localhost:4200.
+```sh
+npm install --save-dev ember-foundation
+```
 
-## Running Tests
+Next, run the blueprint for ember-foundation:
 
-* `ember test`
-* `ember test --server`
+```sh
+ember generate ember-foundation
+```
 
-## Building
+## Stylesheets
 
-* `ember build`
+### Using SASS
 
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+In your app.scss, simply import "ember-foundation":
+
+```scss
+// app/styles/app.scss
+
+@import "ember-foundation";
+```
+
+This will include normalize.css and all Foundation styles.
+
+### Using CSS
+
+To use plain CSS, you'll need to import the CSS files within your Brocfile.js:
+
+```js
+// Brocfile.js
+
+app.import('bower_components/foundation/css/normalize.css');
+app.import('bower_components/foundation/css/foundation.css');
+```
+
+## Component Documentation Pages
+
+The tests/dummy app included in this repository includes demos and examples for all of the Ember-based components. You can view this app at its public location, [http://joshforisha.github.io/ember-foundation](Ember-Foundation). To build the app yourself, simply run `ember serve` or `ember build` from the root folder of this addon.
+
+Note that you will need to have the development dependencies installed for the addon, so an `npm install` and `bower install` might be necessary as well.
