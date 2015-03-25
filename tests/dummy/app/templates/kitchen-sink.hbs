@@ -713,29 +713,8 @@
     <li class="street-address">123 Colonial Ave.</li>
     <li class="locality">Caprica City</li>
     <li><span class="state">Caprica</span>, <span class="zip">12345</span></li>
-    <li class="email">
-      <a data-email-name="josh" data-email-domain="forisha.com">
-        [email&nbsp;protected]
-      </a>
-    </li>
+    <li class="email">test@example.com</li>
   </ul>
-
-  <script>
-    (function () {
-      var emailAddress;
-      var emailLink;
-      var emailLinks = document.querySelectorAll('a[data-email-name][data-email-domain]');
-
-      for (var i = 0; i < emailLinks.length; i++) {
-        emailLink = emailLinks[i];
-        emailAddress = emailLink.getAttribute('data-email-name') +
-          '@' + emailLink.getAttribute('data-email-domain');
-
-        emailLink.setAttribute('href', 'mailto:' + emailAddress);
-        emailLink.textContent = emailAddress;
-      }
-    }());
-  </script>
 </div>
 
 <hr>
