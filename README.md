@@ -1,5 +1,10 @@
-ember-foundation
-================
+# ember-foundation
+
+[![NPM info](https://nodei.co/npm/ember-foundation.png)](https://www.npmjs.com/package/ember-foundation)
+
+[![Ember version](https://img.shields.io/badge/Ember-1.10.0-orange.svg?style=flat-square)](http://emberjs.com)
+
+[![Ember CLI version](https://img.shields.io/badge/Ember--CLI-0.2.1-red.svg?style=flat-square)](http://www.ember-cli.com)
 
 Ember Addon for Zurb Foundation 5 library and Ember components
 
