@@ -9,5 +9,7 @@ export default FComponent.extend({
     return this.get('elementId') + '-panel';
   }.property('elementId'),
 
+  classNames: ['accordion-navigation'],
+
   tagName: 'dd'
 });
