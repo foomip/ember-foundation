@@ -1,8 +1,9 @@
 # ember-foundation
 
-[![Package version](https://img.shields/io/badge/Version-0.4.1-blue.svg?style=flat-square)](https://www.npmjs.com/package/ember-foundation)
+[![Package version](https://img.shields.io/badge/Version-0.4.1-blue.svg?style=flat-square)](https://www.npmjs.com/package/ember-foundation)
 [![Ember CLI version](https://img.shields.io/badge/Ember--CLI-0.2.1-red.svg?style=flat-square)](http://www.ember-cli.com)
 [![Ember version](https://img.shields.io/badge/Ember-1.10.0-orange.svg?style=flat-square)](http://emberjs.com)
+[![Foundation version](https://img.shields.io/badge/Foundation-5.5.1-085a78.svg?style=flat-square)](http://foundation.zurb.com)
 
 Ember Addon for Zurb Foundation 5 library and Ember components
 
