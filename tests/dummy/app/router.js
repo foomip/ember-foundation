@@ -5,7 +5,7 @@ var Router = Ember.Router.extend({
   location: config.locationType
 });
 
-Router.map(function() {
+export default Router.map(function() {
   this.resource('component-demos', { path: '/components/' }, function () {
     this.route('accordion');
     this.route('alerts');
@@ -26,5 +26,3 @@ Router.map(function() {
 
   this.route('kitchen-sink');
 });
-
-export default Router;
