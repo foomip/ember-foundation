@@ -57345,18 +57345,18 @@ var f=d.data(this.attr_name(!0)+"-init"),g=e.S("section, .top-bar-section",d);e.
   });
 });
 
-define('ember-foundation/components/f-accordion-panel', ['exports', 'ember-foundation/components/f-component'], function (exports, FComponent) {
+define('ember-foundation/components/f-accordion-panel', ['exports', 'ember', 'ember-foundation/components/f-component'], function (exports, Ember, FComponent) {
 
   'use strict';
 
   exports['default'] = FComponent['default'].extend({
-    href: (function () {
-      return "#" + this.get("panelId");
-    }).property("panelId"),
+    href: Ember['default'].computed("panelId", function () {
+      return "#" + Ember['default'].get(this, "panelId");
+    }),
 
-    panelId: (function () {
-      return this.get("elementId") + "-panel";
-    }).property("elementId"),
+    panelId: Ember['default'].computed("elementId", function () {
+      return Ember['default'].get(this, "elementId") + "-panel";
+    }),
 
     classNames: ["accordion-navigation"],
 
@@ -57399,25 +57399,27 @@ define('ember-foundation/components/f-arrival', ['exports', 'ember'], function (
   exports['default'] = Ember['default'].Component.extend({
     attributeBindings: ["data-magellan-arrival"],
 
-    "data-magellan-arrival": (function () {
-      return this.get("name");
-    }).property("name"),
+    "data-magellan-arrival": Ember['default'].computed("name", function () {
+      return Ember['default'].get(this, "name");
+    }),
+
+    name: null,
 
     tagName: "dd"
   });
 
 });
-define('ember-foundation/components/f-breadcrumbs', ['exports', 'ember-foundation/components/f-component'], function (exports, FComponent) {
+define('ember-foundation/components/f-breadcrumbs', ['exports', 'ember', 'ember-foundation/components/f-component'], function (exports, Ember, FComponent) {
 
   'use strict';
 
   exports['default'] = FComponent['default'].extend({
     applicationController: null,
 
-    breadCrumbs: (function () {
-      var breadCrumbs = [];
-      var controllers = this.get("controllers");
-      var defaultPaths = this.get("pathNames");
+    breadCrumbs: Ember['default'].computed("controllers.@each.breadCrumbName", "pathNames.[]", function () {
+      var breadCrumbs = Ember['default'].A();
+      var controllers = Ember['default'].get(this, "controllers");
+      var defaultPaths = Ember['default'].get(this, "pathNames");
 
       controllers.forEach(function (controller, index) {
         var crumbName = controller.get("breadCrumbName");
@@ -57436,27 +57438,27 @@ define('ember-foundation/components/f-breadcrumbs', ['exports', 'ember-foundatio
       }
 
       return breadCrumbs;
-    }).property("controllers.@each.breadCrumbName", "pathNames.[]"),
+    }),
 
     classNames: ["breadcrumbs"],
 
-    controllers: (function () {
-      return this.get("handlerInfos").map(function (handlerInfo) {
-        return handlerInfo.handler.controller;
+    controllers: Ember['default'].computed("handlerInfos.[]", function () {
+      return Ember['default'].get(this, "handlerInfos").map(function (handlerInfo) {
+        return Ember['default'].get(handlerInfo, "handler.controller");
       });
-    }).property("handlerInfos.[]"),
+    }),
 
-    handlerInfos: (function () {
-      return this.get("router").router.currentHandlerInfos;
-    }).property("applicationController.currentPath"),
+    handlerInfos: Ember['default'].computed("applicationController.currentPath", function () {
+      return Ember['default'].get(this, "router.router.currentHandlerInfos");
+    }),
 
     tagName: "ul",
 
-    pathNames: (function () {
-      return this.get("handlerInfos").map(function (handlerInfo) {
-        return handlerInfo.name;
+    pathNames: Ember['default'].computed("handlerInfos.[]", function () {
+      return Ember['default'].get(this, "handlerInfos").map(function (handlerInfo) {
+        return Ember['default'].get(handlerInfo, "name");
       });
-    }).property("handlerInfos.[]"),
+    }),
 
     router: null
   });
@@ -57477,9 +57479,9 @@ define('ember-foundation/components/f-button', ['exports', 'ember-foundation/mix
 
     "data-reveal-id": Ember['default'].computed.alias("revealId"),
 
-    isSplit: (function () {
-      return this.get("dropdown") && this.classNames.indexOf("split") > -1;
-    }).property("class"),
+    isSplit: Ember['default'].computed("class", function () {
+      return this.get("dropdown") && Ember['default'].get(this, "classNames").indexOf("split") > -1;
+    }),
 
     role: "button",
 
@@ -57523,13 +57525,13 @@ define('ember-foundation/components/f-component', ['exports', 'ember'], function
 
     "data-options": Ember['default'].computed.alias("options"),
 
-    initFoundation: (function () {
+    initFoundation: Ember['default'].on("didInsertElement", function () {
       Ember['default'].$(document).foundation();
-    }).on("didInsertElement")
+    })
   });
 
 });
-define('ember-foundation/components/f-dropdown', ['exports', 'ember-foundation/components/f-component'], function (exports, FComponent) {
+define('ember-foundation/components/f-dropdown', ['exports', 'ember', 'ember-foundation/components/f-component'], function (exports, Ember, FComponent) {
 
   'use strict';
 
@@ -57542,23 +57544,23 @@ define('ember-foundation/components/f-dropdown', ['exports', 'ember-foundation/c
 
     classNames: ["f-dropdown"],
 
-    "data-dropdown-content": (function () {
-      if (this.classNames.indexOf("content") > -1) {
+    "data-dropdown-content": Ember['default'].computed("class", function () {
+      if (Ember['default'].get(this, "classNames").indexOf("content") > -1) {
         return "";
       }
 
       return;
-    }).property("class"),
+    }),
 
-    tabindex: -1,
-
-    tagName: (function () {
-      if (this.get("content")) {
-        return "div";
+    initialize: Ember['default'].on("init", function () {
+      if (Ember['default'].get(this, "content")) {
+        return Ember['default'].set(this, "tagName", "div");
       }
 
-      return "ul";
-    }).property("content")
+      Ember['default'].set(this, "tagName", "ul");
+    }),
+
+    tabindex: -1
   });
 
 });
@@ -57575,11 +57577,11 @@ define('ember-foundation/components/f-joyride', ['exports', 'ember', 'ember-foun
 
     start: false,
 
-    startChanged: (function () {
-      if (this.get("start")) {
+    startChanged: Ember['default'].observer("start", function () {
+      if (Ember['default'].get(this, "start")) {
         Ember['default'].$(document).foundation("joyride", "start");
       }
-    }).observes("start"),
+    }),
 
     style: "display: none;",
 
@@ -57613,37 +57615,37 @@ define('ember-foundation/components/f-orbit', ['exports', 'ember-foundation/comp
   });
 
 });
-define('ember-foundation/components/f-pagination', ['exports', 'ember-foundation/components/f-component'], function (exports, FComponent) {
+define('ember-foundation/components/f-pagination', ['exports', 'ember', 'ember-foundation/components/f-component'], function (exports, Ember, FComponent) {
 
   'use strict';
 
   exports['default'] = FComponent['default'].extend({
     actions: {
       changePage: function changePage(page) {
-        if (page === this.get("currentPage")) {
+        if (page === Ember['default'].get(this, "currentPage")) {
           return;
         }
 
-        this.set("currentPage", page);
+        Ember['default'].set(this, "currentPage", page);
         this.sendAction("changePage", page);
       },
 
       nextPage: function nextPage() {
-        if (this.get("onLastPage")) {
+        if (Ember['default'].get(this, "onLastPage")) {
           return;
         }
 
-        this.set("currentPage", this.get("currentPage") + 1);
-        this.sendAction("changePage", this.get("currentPage"));
+        this.incrementProperty("currentPage", 1);
+        this.sendAction("changePage", Ember['default'].get(this, "currentPage"));
       },
 
       previousPage: function previousPage() {
-        if (this.get("onFirstPage")) {
+        if (Ember['default'].get(this, "onFirstPage")) {
           return;
         }
 
-        this.set("currentPage", this.get("currentPage") - 1);
-        this.sendAction("changePage", this.get("currentPage"));
+        this.decrementProperty("currentPage", 1);
+        this.sendAction("changePage", Ember['default'].get(this, "currentPage"));
       }
     },
 
@@ -57653,45 +57655,49 @@ define('ember-foundation/components/f-pagination', ['exports', 'ember-foundation
 
     classNames: ["pagination"],
 
-    onFirstPage: (function () {
-      return this.get("currentPage") === 1;
-    }).property("currentPage"),
+    currentPage: 0,
 
-    onLastPage: (function () {
-      return this.get("currentPage") === this.get("totalPages");
-    }).property("currentPage", "totalPages"),
+    onFirstPage: Ember['default'].computed("currentPage", function () {
+      return Ember['default'].get(this, "currentPage") === 1;
+    }),
 
-    pages: (function () {
-      var currentPage = this.get("currentPage");
-      var pages = [];
-      var totalPages = this.get("totalPages");
+    onLastPage: Ember['default'].computed("currentPage", "totalPages", function () {
+      return Ember['default'].get(this, "currentPage") === Ember['default'].get(this, "totalPages");
+    }),
+
+    pages: Ember['default'].computed("currentPage", "totalPages", function () {
+      var currentPage = Ember['default'].get(this, "currentPage");
+      var pages = Ember['default'].A();
+      var totalPages = Ember['default'].get(this, "totalPages");
 
       for (var i = 1; i <= totalPages; i++) {
-        pages.push({
+        pages.pushObject({
           current: i === currentPage,
           number: i
         });
       }
 
       return pages;
-    }).property("currentPage", "totalPages"),
+    }),
 
     role: "menubar",
 
-    tagName: "ul"
+    tagName: "ul",
+
+    totalPages: 0
   });
 
 });
-define('ember-foundation/components/f-progress-bar', ['exports', 'ember-foundation/components/f-component'], function (exports, FComponent) {
+define('ember-foundation/components/f-progress-bar', ['exports', 'ember', 'ember-foundation/components/f-component'], function (exports, Ember, FComponent) {
 
   'use strict';
 
   exports['default'] = FComponent['default'].extend({
     classNames: ["progress"],
 
-    meterStyle: (function () {
+    meterStyle: Ember['default'].computed("value", function () {
       return "width: " + this.get("value") + "%;";
-    }).property("value"),
+    }),
 
     tagName: "div",
 
@@ -57714,7 +57720,7 @@ define('ember-foundation/components/f-reveal-modal', ['exports', 'ember-foundati
   });
 
 });
-define('ember-foundation/components/f-slider', ['exports', 'ember-foundation/components/f-component'], function (exports, FComponent) {
+define('ember-foundation/components/f-slider', ['exports', 'ember', 'ember-foundation/components/f-component'], function (exports, Ember, FComponent) {
 
   'use strict';
 
@@ -57725,10 +57731,11 @@ define('ember-foundation/components/f-slider', ['exports', 'ember-foundation/com
 
     "data-slider": "",
 
-    setup: (function () {
-      var self = this;
-      var slider = this.$();
-      var value = this.get("value");
+    setup: Ember['default'].observer("didInsertElement", function () {
+      var _this = this;
+
+      var slider = Ember['default'].$(this);
+      var value = Ember['default'].get(this, "value");
 
       if (value) {
         slider.foundation("slider", "set_value", value);
@@ -57737,21 +57744,21 @@ define('ember-foundation/components/f-slider', ['exports', 'ember-foundation/com
       slider.on("change.fndtn.slider", function () {
         var sliderValue = slider.attr("data-slider");
 
-        self.set("value", sliderValue);
-        self.sendAction("change", sliderValue);
+        Ember['default'].set(_this, "value", sliderValue);
+        _this.sendAction("change", sliderValue);
       });
-    }).on("didInsertElement"),
+    }),
 
     tagName: "div",
 
-    updateSliderValue: (function () {
-      var slider = this.$();
-      var value = this.get("value");
+    updateSliderValue: Ember['default'].observer("value", function () {
+      var slider = Ember['default'].$(this);
+      var value = Ember['default'].get(this, "value");
 
       if (slider.attr("data-slider") !== value) {
         slider.foundation("slider", "set_value", value);
       }
-    }).observes("value")
+    })
   });
 
 });
@@ -57774,16 +57781,16 @@ define('ember-foundation/components/f-stop', ['exports', 'ember', 'ember-foundat
   });
 
 });
-define('ember-foundation/components/f-switch', ['exports', 'ember-foundation/components/f-component'], function (exports, FComponent) {
+define('ember-foundation/components/f-switch', ['exports', 'ember', 'ember-foundation/components/f-component'], function (exports, Ember, FComponent) {
 
   'use strict';
 
   exports['default'] = FComponent['default'].extend({
     classNames: ["switch"],
 
-    inputId: (function () {
-      return this.get("elementId") + "-input";
-    }).property(),
+    inputId: Ember['default'].computed("elementId", function () {
+      return Ember['default'].get(this, "elementId") + "-input";
+    }),
 
     tagName: "fieldset",
 
@@ -57793,22 +57800,24 @@ define('ember-foundation/components/f-switch', ['exports', 'ember-foundation/com
   });
 
 });
-define('ember-foundation/components/f-switches', ['exports', 'ember-foundation/components/f-component'], function (exports, FComponent) {
+define('ember-foundation/components/f-switches', ['exports', 'ember', 'ember-foundation/components/f-component'], function (exports, Ember, FComponent) {
 
   'use strict';
 
   exports['default'] = FComponent['default'].extend({
     classNames: ["switch"],
 
-    setup: (function () {
-      var self = this;
+    setup: Ember['default'].observer("didInsertElement", function () {
+      var _this = this;
 
-      this.$("input[value=\"" + this.get("value") + "\"]").prop("checked", true);
+      var value = Ember['default'].get(this, "value");
+      Ember['default'].$("input[value=\"" + value + "\"]", this).prop("checked", true);
 
-      this.$("input").on("change", function () {
-        self.set("value", self.$(this).val());
+      var input = Ember['default'].$("input", this);
+      input.on("change", function () {
+        Ember['default'].set(_this, "value", input.val());
       });
-    }).on("didInsertElement"),
+    }),
 
     tabindex: 0,
 
@@ -57833,13 +57842,13 @@ define('ember-foundation/components/f-tab-pane', ['exports', 'ember', 'ember-fou
   });
 
 });
-define('ember-foundation/components/f-tab-panel', ['exports', 'ember-foundation/components/f-component'], function (exports, FComponent) {
+define('ember-foundation/components/f-tab-panel', ['exports', 'ember', 'ember-foundation/components/f-component'], function (exports, Ember, FComponent) {
 
   'use strict';
 
   exports['default'] = FComponent['default'].extend({
-    setup: (function () {
-      var tabs = [];
+    setup: Ember['default'].on("didInsertElement", function () {
+      var tabs = Ember['default'].A();
 
       this.$(".content").each(function () {
         tabs.push({
@@ -57848,8 +57857,8 @@ define('ember-foundation/components/f-tab-panel', ['exports', 'ember-foundation/
         });
       });
 
-      this.set("tabs", tabs);
-    }).on("didInsertElement"),
+      Ember['default'].set(this, "tabs", tabs);
+    }),
 
     tagName: "div"
   });
@@ -57874,9 +57883,9 @@ define('ember-foundation/components/f-tooltip', ['exports', 'ember', 'ember-foun
 
     position: "bottom",
 
-    positionClass: (function () {
-      return "tip-" + this.get("position");
-    }).property("position"),
+    positionClass: Ember['default'].computed("position", function () {
+      return "tip-" + Ember['default'].get(this, "position");
+    }),
 
     tagName: "span"
   });
@@ -57889,21 +57898,21 @@ define('ember-foundation/mixins/dropdown-enabled', ['exports', 'ember'], functio
   exports['default'] = Ember['default'].Mixin.create({
     attributeBindings: ["aria-controls", "data-dropdown", "data-options"],
 
-    setupDropdown: (function () {
-      var alignment = this.get("align-dropdown");
-      var dropdownId = this.get("dropdownId");
-      var hover = this.get("hover");
+    setupDropdown: Ember['default'].on("didInsertElement", function () {
+      var alignment = Ember['default'].get(this, "align-dropdown");
+      var dropdownId = Ember['default'].get(this, "dropdownId");
+      var hover = Ember['default'].get(this, "hover");
       var options = [];
 
       if (!dropdownId) {
         return;
       }
 
-      this.set("aria-controls", dropdownId);
+      Ember['default'].set(this, "aria-controls", dropdownId);
 
       // A split button will not include this property directly
-      if (!this.get("isSplit")) {
-        this.set("data-dropdown", dropdownId);
+      if (!Ember['default'].get(this, "isSplit")) {
+        Ember['default'].set(this, "data-dropdown", dropdownId);
       }
 
       if (alignment) {
@@ -57914,8 +57923,8 @@ define('ember-foundation/mixins/dropdown-enabled', ['exports', 'ember'], functio
         options.push("is_hover:true");
       }
 
-      this.set("data-options", options.join(";"));
-    }).on("didInsertElement")
+      Ember['default'].set(this, "data-options", options.join(";"));
+    })
   });
 
 });

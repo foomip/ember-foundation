@@ -211,7 +211,7 @@ define('dummy/controllers/component-demos/switches', ['exports', 'ember'], funct
   'use strict';
 
   exports['default'] = Ember['default'].Controller.extend({
-    switchesOptions: [{
+    switchesOptions: Ember['default'].A([{
       id: "a",
       label: "Off",
       value: "off"
@@ -219,7 +219,7 @@ define('dummy/controllers/component-demos/switches', ['exports', 'ember'], funct
       id: "a1",
       label: "On",
       value: "on"
-    }],
+    }]),
 
     switchesValue: "off"
   });
@@ -255,7 +255,7 @@ define('dummy/controllers/kitchen-sink', ['exports', 'ember'], function (exports
 
     breadCrumbName: "Kitchen Sink",
 
-    switchAOptions: [{
+    switchAOptions: Ember['default'].A([{
       id: "a",
       label: "Off",
       value: "off"
@@ -263,11 +263,11 @@ define('dummy/controllers/kitchen-sink', ['exports', 'ember'], function (exports
       id: "a1",
       label: "On",
       value: "on"
-    }],
+    }]),
 
     switchAValue: "off",
 
-    switchBOptions: [{
+    switchBOptions: Ember['default'].A([{
       id: "b",
       label: "Off",
       value: "off"
@@ -275,11 +275,11 @@ define('dummy/controllers/kitchen-sink', ['exports', 'ember'], function (exports
       id: "b1",
       label: "On",
       value: "on"
-    }],
+    }]),
 
     switchBValue: "off",
 
-    switchCOptions: [{
+    switchCOptions: Ember['default'].A([{
       id: "c",
       label: "Off",
       value: "off"
@@ -287,11 +287,11 @@ define('dummy/controllers/kitchen-sink', ['exports', 'ember'], function (exports
       id: "c1",
       label: "On",
       value: "on"
-    }],
+    }]),
 
     switchCValue: "off",
 
-    switchDOptions: [{
+    switchDOptions: Ember['default'].A([{
       id: "d",
       label: "Off",
       value: "off"
@@ -299,7 +299,7 @@ define('dummy/controllers/kitchen-sink', ['exports', 'ember'], function (exports
       id: "d1",
       label: "On",
       value: "on"
-    }],
+    }]),
 
     switchDValue: "off"
   });
@@ -14328,7 +14328,7 @@ catch(err) {
 if (runningTests) {
   require("dummy/tests/test-helper");
 } else {
-  require("dummy/app")["default"].create({"name":"ember-foundation","version":"0.5.0.b5ea00e4"});
+  require("dummy/app")["default"].create({"name":"ember-foundation","version":"0.5.0"});
 }
 
 /* jshint ignore:end */
