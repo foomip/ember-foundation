@@ -1,13 +1,14 @@
+import Ember from 'ember';
 import FComponent from './f-component';
 
 export default FComponent.extend({
-  href: function() {
-    return '#' + this.get('panelId');
-  }.property('panelId'),
+  href: Ember.computed('panelId', function () {
+    return '#' + Ember.get(this, 'panelId');
+  }),
 
-  panelId: function() {
-    return this.get('elementId') + '-panel';
-  }.property('elementId'),
+  panelId: Ember.computed('elementId', function () {
+    return Ember.get(this, 'elementId') + '-panel';
+  }),
 
   classNames: ['accordion-navigation'],
 

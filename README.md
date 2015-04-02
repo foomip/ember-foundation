@@ -14,7 +14,7 @@ Ember Addon for Zurb Foundation 5 library and Ember components
 Within an ember-cli app, run:
 
 ```sh
-npm install --save-dev ember-foundation
+ember install:addon ember-foundation
 ```
 
 Next, run the blueprint for ember-foundation:

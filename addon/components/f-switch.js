@@ -1,11 +1,12 @@
+import Ember from 'ember';
 import FComponent from './f-component';
 
 export default FComponent.extend({
   classNames: ['switch'],
 
-  inputId: function() {
-    return this.get('elementId') + '-input';
-  }.property(),
+  inputId: Ember.computed('elementId', function () {
+    return Ember.get(this, 'elementId') + '-input';
+  }),
 
   tagName: 'fieldset',
 

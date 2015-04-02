@@ -1,3 +1,4 @@
+import Ember from 'ember';
 import FComponent from './f-component';
 
 export default FComponent.extend({
@@ -9,21 +10,21 @@ export default FComponent.extend({
 
   classNames: ['f-dropdown'],
 
-  'data-dropdown-content': function() {
-    if (this.classNames.indexOf('content') > -1) {
+  'data-dropdown-content': Ember.computed('class', function () {
+    if (Ember.get(this, 'classNames').indexOf('content') > -1) {
       return '';
     }
 
     return;
-  }.property('class'),
+  }),
 
-  tabindex: -1,
-
-  tagName: function() {
-    if (this.get('content')) {
-      return 'div';
+  initialize: Ember.on('init', function () {
+    if (Ember.get(this, 'content')) {
+      return Ember.set(this, 'tagName', 'div');
     }
 
-    return 'ul';
-  }.property('content')
+    Ember.set(this, 'tagName', 'ul');
+  }),
+
+  tabindex: -1
 });

@@ -1,32 +1,33 @@
+import Ember from 'ember';
 import FComponent from './f-component';
 
 export default FComponent.extend({
   actions: {
-    changePage: function(page) {
-      if (page === this.get('currentPage')) {
+    changePage(page) {
+      if (page === Ember.get(this, 'currentPage')) {
         return;
       }
 
-      this.set('currentPage', page);
+      Ember.set(this, 'currentPage', page);
       this.sendAction('changePage', page);
     },
 
-    nextPage: function() {
-      if (this.get('onLastPage')) {
+    nextPage() {
+      if (Ember.get(this, 'onLastPage')) {
         return;
       }
 
-      this.set('currentPage', this.get('currentPage') + 1);
-      this.sendAction('changePage', this.get('currentPage'));
+      this.incrementProperty('currentPage', 1);
+      this.sendAction('changePage', Ember.get(this, 'currentPage'));
     },
 
-    previousPage: function() {
-      if (this.get('onFirstPage')) {
+    previousPage() {
+      if (Ember.get(this, 'onFirstPage')) {
         return;
       }
 
-      this.set('currentPage', this.get('currentPage') - 1);
-      this.sendAction('changePage', this.get('currentPage'));
+      this.decrementProperty('currentPage', 1);
+      this.sendAction('changePage', Ember.get(this, 'currentPage'));
     }
   },
 
@@ -36,30 +37,34 @@ export default FComponent.extend({
 
   classNames: ['pagination'],
 
-  onFirstPage: function() {
-    return this.get('currentPage') === 1;
-  }.property('currentPage'),
+  currentPage: 0,
 
-  onLastPage: function() {
-    return this.get('currentPage') === this.get('totalPages');
-  }.property('currentPage', 'totalPages'),
+  onFirstPage: Ember.computed('currentPage', function () {
+    return Ember.get(this, 'currentPage') === 1;
+  }),
 
-  pages: function() {
-    var currentPage = this.get('currentPage');
-    var pages = [];
-    var totalPages = this.get('totalPages');
+  onLastPage: Ember.computed('currentPage', 'totalPages', function () {
+    return Ember.get(this, 'currentPage') === Ember.get(this, 'totalPages');
+  }),
 
-    for (var i = 1; i <= totalPages; i++) {
-      pages.push({
+  pages: Ember.computed('currentPage', 'totalPages', function () {
+    var currentPage = Ember.get(this, 'currentPage');
+    var pages = Ember.A();
+    var totalPages = Ember.get(this, 'totalPages');
+
+    for (let i = 1; i <= totalPages; i++) {
+      pages.pushObject({
         current: (i === currentPage),
         number: i
       });
     }
 
     return pages;
-  }.property('currentPage', 'totalPages'),
+  }),
 
   role: 'menubar',
 
-  tagName: 'ul'
+  tagName: 'ul',
+
+  totalPages: 0
 });

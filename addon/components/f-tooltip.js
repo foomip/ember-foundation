@@ -16,9 +16,9 @@ export default FComponent.extend({
 
   position: 'bottom',
 
-  positionClass: function() {
-    return 'tip-' + this.get('position');
-  }.property('position'),
+  positionClass: Ember.computed('position', function () {
+    return 'tip-' + Ember.get(this, 'position');
+  }),
 
   tagName: 'span'
 });

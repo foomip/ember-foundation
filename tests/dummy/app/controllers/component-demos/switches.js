@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  switchesOptions: [
+  switchesOptions: Ember.A([
     {
       id: 'a',
       label: 'Off',
@@ -11,7 +11,7 @@ export default Ember.Controller.extend({
       label: 'On',
       value: 'on'
     }
-  ],
+  ]),
 
   switchesValue: 'off'
 });

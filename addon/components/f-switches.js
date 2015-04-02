@@ -1,17 +1,18 @@
+import Ember from 'ember';
 import FComponent from './f-component';
 
 export default FComponent.extend({
   classNames: ['switch'],
 
-  setup: function () {
-    var self = this;
+  setup: Ember.observer('didInsertElement', function () {
+    var value = Ember.get(this, 'value');
+    Ember.$('input[value="' + value + '"]', this).prop('checked', true);
 
-    this.$('input[value="' + this.get('value') + '"]').prop('checked', true);
-
-    this.$('input').on('change', function() {
-      self.set('value', self.$(this).val());
+    var input = Ember.$('input', this);
+    input.on('change', () => {
+      Ember.set(this, 'value', input.val());
     });
-  }.on('didInsertElement'),
+  }),
 
   tabindex: 0,
 

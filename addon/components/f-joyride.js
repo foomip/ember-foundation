@@ -10,11 +10,11 @@ export default FComponent.extend({
 
   start: false,
 
-  startChanged: function() {
-    if (this.get('start')) {
+  startChanged: Ember.observer('start', function () {
+    if (Ember.get(this, 'start')) {
       Ember.$(document).foundation('joyride', 'start');
     }
-  }.observes('start'),
+  }),
 
   style: 'display: none;',
 
