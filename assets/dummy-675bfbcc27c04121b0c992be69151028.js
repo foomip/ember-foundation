@@ -368,7 +368,7 @@ define('dummy/router', ['exports', 'ember', 'dummy/config/environment'], functio
     location: config['default'].locationType
   });
 
-  Router.map(function () {
+  exports['default'] = Router.map(function () {
     this.resource("component-demos", { path: "/components/" }, function () {
       this.route("accordion");
       this.route("alerts");
@@ -390,8 +390,6 @@ define('dummy/router', ['exports', 'ember', 'dummy/config/environment'], functio
     this.route("kitchen-sink");
   });
 
-  exports['default'] = Router;
-
 });
 define('dummy/templates/application', ['exports'], function (exports) {
 
@@ -401,11 +399,14 @@ define('dummy/templates/application', ['exports'], function (exports) {
     var child0 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Ember-Foundation");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Ember-Foundation");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -434,11 +435,14 @@ define('dummy/templates/application', ['exports'], function (exports) {
     var child1 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Components");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Components");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -467,11 +471,14 @@ define('dummy/templates/application', ['exports'], function (exports) {
     var child2 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Accordion");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Accordion");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -500,11 +507,14 @@ define('dummy/templates/application', ['exports'], function (exports) {
     var child3 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Alerts");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Alerts");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -533,11 +543,14 @@ define('dummy/templates/application', ['exports'], function (exports) {
     var child4 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Breadcrumbs");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Breadcrumbs");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -566,11 +579,14 @@ define('dummy/templates/application', ['exports'], function (exports) {
     var child5 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Buttons");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Buttons");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -599,11 +615,14 @@ define('dummy/templates/application', ['exports'], function (exports) {
     var child6 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Clearing");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Clearing");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -632,11 +651,14 @@ define('dummy/templates/application', ['exports'], function (exports) {
     var child7 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Dropdowns");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Dropdowns");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -665,11 +687,14 @@ define('dummy/templates/application', ['exports'], function (exports) {
     var child8 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Joyride");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Joyride");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -698,11 +723,14 @@ define('dummy/templates/application', ['exports'], function (exports) {
     var child9 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Magellan");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Magellan");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -731,11 +759,14 @@ define('dummy/templates/application', ['exports'], function (exports) {
     var child10 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Pagination");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Pagination");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -764,11 +795,14 @@ define('dummy/templates/application', ['exports'], function (exports) {
     var child11 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Progress Bars");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Progress Bars");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -797,11 +831,14 @@ define('dummy/templates/application', ['exports'], function (exports) {
     var child12 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Reveal Modal");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Reveal Modal");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -830,11 +867,14 @@ define('dummy/templates/application', ['exports'], function (exports) {
     var child13 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Sliders");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Sliders");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -863,11 +903,14 @@ define('dummy/templates/application', ['exports'], function (exports) {
     var child14 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Switches");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Switches");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -896,11 +939,14 @@ define('dummy/templates/application', ['exports'], function (exports) {
     var child15 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Tabs");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Tabs");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -929,11 +975,14 @@ define('dummy/templates/application', ['exports'], function (exports) {
     var child16 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Tooltips");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Tooltips");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -962,11 +1011,14 @@ define('dummy/templates/application', ['exports'], function (exports) {
     var child17 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Kitchen Sink");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Kitchen Sink");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -994,6 +1046,7 @@ define('dummy/templates/application', ['exports'], function (exports) {
     }());
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -1014,6 +1067,8 @@ define('dummy/templates/application', ['exports'], function (exports) {
         dom.appendChild(el3, el4);
         var el4 = dom.createElement("h1");
         var el5 = dom.createTextNode("\n        ");
+        dom.appendChild(el4, el5);
+        var el5 = dom.createComment("");
         dom.appendChild(el4, el5);
         var el5 = dom.createTextNode("\n      ");
         dom.appendChild(el4, el5);
@@ -1069,6 +1124,8 @@ define('dummy/templates/application', ['exports'], function (exports) {
         dom.setAttribute(el4,"class","has-dropdown");
         var el5 = dom.createTextNode("\n        ");
         dom.appendChild(el4, el5);
+        var el5 = dom.createComment("");
+        dom.appendChild(el4, el5);
         var el5 = dom.createTextNode("\n        ");
         dom.appendChild(el4, el5);
         var el5 = dom.createElement("ul");
@@ -1076,62 +1133,92 @@ define('dummy/templates/application', ['exports'], function (exports) {
         var el6 = dom.createTextNode("\n          ");
         dom.appendChild(el5, el6);
         var el6 = dom.createElement("li");
+        var el7 = dom.createComment("");
+        dom.appendChild(el6, el7);
         dom.appendChild(el5, el6);
         var el6 = dom.createTextNode("\n          ");
         dom.appendChild(el5, el6);
         var el6 = dom.createElement("li");
+        var el7 = dom.createComment("");
+        dom.appendChild(el6, el7);
         dom.appendChild(el5, el6);
         var el6 = dom.createTextNode("\n          ");
         dom.appendChild(el5, el6);
         var el6 = dom.createElement("li");
+        var el7 = dom.createComment("");
+        dom.appendChild(el6, el7);
         dom.appendChild(el5, el6);
         var el6 = dom.createTextNode("\n          ");
         dom.appendChild(el5, el6);
         var el6 = dom.createElement("li");
+        var el7 = dom.createComment("");
+        dom.appendChild(el6, el7);
         dom.appendChild(el5, el6);
         var el6 = dom.createTextNode("\n          ");
         dom.appendChild(el5, el6);
         var el6 = dom.createElement("li");
+        var el7 = dom.createComment("");
+        dom.appendChild(el6, el7);
         dom.appendChild(el5, el6);
         var el6 = dom.createTextNode("\n          ");
         dom.appendChild(el5, el6);
         var el6 = dom.createElement("li");
+        var el7 = dom.createComment("");
+        dom.appendChild(el6, el7);
         dom.appendChild(el5, el6);
         var el6 = dom.createTextNode("\n          ");
         dom.appendChild(el5, el6);
         var el6 = dom.createElement("li");
+        var el7 = dom.createComment("");
+        dom.appendChild(el6, el7);
         dom.appendChild(el5, el6);
         var el6 = dom.createTextNode("\n          ");
         dom.appendChild(el5, el6);
         var el6 = dom.createElement("li");
+        var el7 = dom.createComment("");
+        dom.appendChild(el6, el7);
         dom.appendChild(el5, el6);
         var el6 = dom.createTextNode("\n          ");
         dom.appendChild(el5, el6);
         var el6 = dom.createElement("li");
+        var el7 = dom.createComment("");
+        dom.appendChild(el6, el7);
         dom.appendChild(el5, el6);
         var el6 = dom.createTextNode("\n          ");
         dom.appendChild(el5, el6);
         var el6 = dom.createElement("li");
+        var el7 = dom.createComment("");
+        dom.appendChild(el6, el7);
         dom.appendChild(el5, el6);
         var el6 = dom.createTextNode("\n          ");
         dom.appendChild(el5, el6);
         var el6 = dom.createElement("li");
+        var el7 = dom.createComment("");
+        dom.appendChild(el6, el7);
         dom.appendChild(el5, el6);
         var el6 = dom.createTextNode("\n          ");
         dom.appendChild(el5, el6);
         var el6 = dom.createElement("li");
+        var el7 = dom.createComment("");
+        dom.appendChild(el6, el7);
         dom.appendChild(el5, el6);
         var el6 = dom.createTextNode("\n          ");
         dom.appendChild(el5, el6);
         var el6 = dom.createElement("li");
+        var el7 = dom.createComment("");
+        dom.appendChild(el6, el7);
         dom.appendChild(el5, el6);
         var el6 = dom.createTextNode("\n          ");
         dom.appendChild(el5, el6);
         var el6 = dom.createElement("li");
+        var el7 = dom.createComment("");
+        dom.appendChild(el6, el7);
         dom.appendChild(el5, el6);
         var el6 = dom.createTextNode("\n          ");
         dom.appendChild(el5, el6);
         var el6 = dom.createElement("li");
+        var el7 = dom.createComment("");
+        dom.appendChild(el6, el7);
         dom.appendChild(el5, el6);
         var el6 = dom.createTextNode("\n        ");
         dom.appendChild(el5, el6);
@@ -1147,6 +1234,8 @@ define('dummy/templates/application', ['exports'], function (exports) {
         var el4 = dom.createTextNode("\n      ");
         dom.appendChild(el3, el4);
         var el4 = dom.createElement("li");
+        var el5 = dom.createComment("");
+        dom.appendChild(el4, el5);
         dom.appendChild(el3, el4);
         var el4 = dom.createTextNode("\n    ");
         dom.appendChild(el3, el4);
@@ -1167,6 +1256,8 @@ define('dummy/templates/application', ['exports'], function (exports) {
         var el2 = dom.createElement("div");
         dom.setAttribute(el2,"class","row");
         var el3 = dom.createTextNode("\n    ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n  ");
         dom.appendChild(el2, el3);
@@ -1201,26 +1292,26 @@ define('dummy/templates/application', ['exports'], function (exports) {
         var element0 = dom.childAt(fragment, [0]);
         var element1 = dom.childAt(element0, [3, 3]);
         var element2 = dom.childAt(element1, [3]);
-        var element3 = dom.childAt(element2, [2]);
-        var morph0 = dom.createMorphAt(dom.childAt(element0, [1, 1, 1]),0,1);
-        var morph1 = dom.createMorphAt(element2,0,1);
-        var morph2 = dom.createMorphAt(dom.childAt(element3, [1]),-1,-1);
-        var morph3 = dom.createMorphAt(dom.childAt(element3, [3]),-1,-1);
-        var morph4 = dom.createMorphAt(dom.childAt(element3, [5]),-1,-1);
-        var morph5 = dom.createMorphAt(dom.childAt(element3, [7]),-1,-1);
-        var morph6 = dom.createMorphAt(dom.childAt(element3, [9]),-1,-1);
-        var morph7 = dom.createMorphAt(dom.childAt(element3, [11]),-1,-1);
-        var morph8 = dom.createMorphAt(dom.childAt(element3, [13]),-1,-1);
-        var morph9 = dom.createMorphAt(dom.childAt(element3, [15]),-1,-1);
-        var morph10 = dom.createMorphAt(dom.childAt(element3, [17]),-1,-1);
-        var morph11 = dom.createMorphAt(dom.childAt(element3, [19]),-1,-1);
-        var morph12 = dom.createMorphAt(dom.childAt(element3, [21]),-1,-1);
-        var morph13 = dom.createMorphAt(dom.childAt(element3, [23]),-1,-1);
-        var morph14 = dom.createMorphAt(dom.childAt(element3, [25]),-1,-1);
-        var morph15 = dom.createMorphAt(dom.childAt(element3, [27]),-1,-1);
-        var morph16 = dom.createMorphAt(dom.childAt(element3, [29]),-1,-1);
-        var morph17 = dom.createMorphAt(dom.childAt(element1, [7]),-1,-1);
-        var morph18 = dom.createMorphAt(dom.childAt(fragment, [2, 1]),0,1);
+        var element3 = dom.childAt(element2, [3]);
+        var morph0 = dom.createMorphAt(dom.childAt(element0, [1, 1, 1]),1,1);
+        var morph1 = dom.createMorphAt(element2,1,1);
+        var morph2 = dom.createMorphAt(dom.childAt(element3, [1]),0,0);
+        var morph3 = dom.createMorphAt(dom.childAt(element3, [3]),0,0);
+        var morph4 = dom.createMorphAt(dom.childAt(element3, [5]),0,0);
+        var morph5 = dom.createMorphAt(dom.childAt(element3, [7]),0,0);
+        var morph6 = dom.createMorphAt(dom.childAt(element3, [9]),0,0);
+        var morph7 = dom.createMorphAt(dom.childAt(element3, [11]),0,0);
+        var morph8 = dom.createMorphAt(dom.childAt(element3, [13]),0,0);
+        var morph9 = dom.createMorphAt(dom.childAt(element3, [15]),0,0);
+        var morph10 = dom.createMorphAt(dom.childAt(element3, [17]),0,0);
+        var morph11 = dom.createMorphAt(dom.childAt(element3, [19]),0,0);
+        var morph12 = dom.createMorphAt(dom.childAt(element3, [21]),0,0);
+        var morph13 = dom.createMorphAt(dom.childAt(element3, [23]),0,0);
+        var morph14 = dom.createMorphAt(dom.childAt(element3, [25]),0,0);
+        var morph15 = dom.createMorphAt(dom.childAt(element3, [27]),0,0);
+        var morph16 = dom.createMorphAt(dom.childAt(element3, [29]),0,0);
+        var morph17 = dom.createMorphAt(dom.childAt(element1, [7]),0,0);
+        var morph18 = dom.createMorphAt(dom.childAt(fragment, [2, 1]),1,1);
         block(env, morph0, context, "link-to", ["index"], {}, child0, null);
         block(env, morph1, context, "link-to", ["component-demos.index"], {}, child1, null);
         block(env, morph2, context, "link-to", ["component-demos.accordion"], {}, child2, null);
@@ -1253,12 +1344,13 @@ define('dummy/templates/component-demos', ['exports'], function (exports) {
   exports['default'] = Ember.HTMLBars.template((function() {
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
       build: function build(dom) {
         var el0 = dom.createDocumentFragment();
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
@@ -1284,8 +1376,8 @@ define('dummy/templates/component-demos', ['exports'], function (exports) {
         } else {
           fragment = this.build(dom);
         }
-        if (this.cachedFragment) { dom.repairClonedNode(fragment,[0]); }
-        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+        var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+        dom.insertBoundary(fragment, 0);
         content(env, morph0, context, "outlet");
         return fragment;
       }
@@ -1302,6 +1394,7 @@ define('dummy/templates/component-demos/accordion', ['exports'], function (expor
       var child0 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
@@ -1343,6 +1436,7 @@ define('dummy/templates/component-demos/accordion', ['exports'], function (expor
       var child1 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
@@ -1384,6 +1478,7 @@ define('dummy/templates/component-demos/accordion', ['exports'], function (expor
       var child2 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
@@ -1424,6 +1519,7 @@ define('dummy/templates/component-demos/accordion', ['exports'], function (expor
       }());
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -1431,9 +1527,15 @@ define('dummy/templates/component-demos/accordion', ['exports'], function (expor
           var el0 = dom.createDocumentFragment();
           var el1 = dom.createTextNode("\n");
           dom.appendChild(el0, el1);
-          var el1 = dom.createTextNode("\n");
+          var el1 = dom.createComment("");
           dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createComment("");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createComment("");
           dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n");
           dom.appendChild(el0, el1);
@@ -1459,9 +1561,9 @@ define('dummy/templates/component-demos/accordion', ['exports'], function (expor
           } else {
             fragment = this.build(dom);
           }
-          var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
-          var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
-          var morph2 = dom.createMorphAt(fragment,2,3,contextualElement);
+          var morph0 = dom.createMorphAt(fragment,1,1,contextualElement);
+          var morph1 = dom.createMorphAt(fragment,3,3,contextualElement);
+          var morph2 = dom.createMorphAt(fragment,5,5,contextualElement);
           block(env, morph0, context, "f-accordion-panel", [], {"id": "accordionDemoPanel1", "title": "Panel 1"}, child0, null);
           block(env, morph1, context, "f-accordion-panel", [], {"id": "accordionDemoPanel2", "title": "Panel 2"}, child1, null);
           block(env, morph2, context, "f-accordion-panel", [], {"id": "accordionDemoPanel3", "title": "Panel 3"}, child2, null);
@@ -1471,6 +1573,7 @@ define('dummy/templates/component-demos/accordion', ['exports'], function (expor
     }());
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -1538,6 +1641,8 @@ define('dummy/templates/component-demos/accordion', ['exports'], function (expor
         dom.appendChild(el3, el4);
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("  ");
         dom.appendChild(el2, el3);
@@ -1683,7 +1788,7 @@ define('dummy/templates/component-demos/accordion', ['exports'], function (expor
         } else {
           fragment = this.build(dom);
         }
-        var morph0 = dom.createMorphAt(dom.childAt(fragment, [8, 3]),2,3);
+        var morph0 = dom.createMorphAt(dom.childAt(fragment, [8, 3]),3,3);
         block(env, morph0, context, "f-accordion", [], {}, child0, null);
         return fragment;
       }
@@ -1699,11 +1804,14 @@ define('dummy/templates/component-demos/alerts', ['exports'], function (exports)
     var child0 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Standard alert");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Standard alert");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -1732,11 +1840,14 @@ define('dummy/templates/component-demos/alerts', ['exports'], function (exports)
     var child1 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Alert alert");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Alert alert");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -1765,11 +1876,14 @@ define('dummy/templates/component-demos/alerts', ['exports'], function (exports)
     var child2 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Round success alert");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Round success alert");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -1798,11 +1912,14 @@ define('dummy/templates/component-demos/alerts', ['exports'], function (exports)
     var child3 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Secondary alert");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Secondary alert");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -1830,6 +1947,7 @@ define('dummy/templates/component-demos/alerts', ['exports'], function (exports)
     }());
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -1900,6 +2018,8 @@ define('dummy/templates/component-demos/alerts', ['exports'], function (exports)
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n    ");
         dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n  ");
         dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
@@ -1943,6 +2063,8 @@ define('dummy/templates/component-demos/alerts', ['exports'], function (exports)
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n    ");
         dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n  ");
         dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
@@ -1985,6 +2107,8 @@ define('dummy/templates/component-demos/alerts', ['exports'], function (exports)
         dom.appendChild(el3, el4);
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n    ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n  ");
         dom.appendChild(el2, el3);
@@ -2032,6 +2156,8 @@ define('dummy/templates/component-demos/alerts', ['exports'], function (exports)
         dom.appendChild(el3, el4);
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n    ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n  ");
         dom.appendChild(el2, el3);
@@ -2096,10 +2222,10 @@ define('dummy/templates/component-demos/alerts', ['exports'], function (exports)
         } else {
           fragment = this.build(dom);
         }
-        var morph0 = dom.createMorphAt(dom.childAt(fragment, [8, 3]),2,3);
-        var morph1 = dom.createMorphAt(dom.childAt(fragment, [10, 3]),2,3);
-        var morph2 = dom.createMorphAt(dom.childAt(fragment, [12, 3]),2,3);
-        var morph3 = dom.createMorphAt(dom.childAt(fragment, [16, 3]),2,3);
+        var morph0 = dom.createMorphAt(dom.childAt(fragment, [8, 3]),3,3);
+        var morph1 = dom.createMorphAt(dom.childAt(fragment, [10, 3]),3,3);
+        var morph2 = dom.createMorphAt(dom.childAt(fragment, [12, 3]),3,3);
+        var morph3 = dom.createMorphAt(dom.childAt(fragment, [16, 3]),3,3);
         block(env, morph0, context, "f-alert", [], {"class": "radius"}, child0, null);
         block(env, morph1, context, "f-alert", [], {"class": "alert"}, child1, null);
         block(env, morph2, context, "f-alert", [], {"class": "round success"}, child2, null);
@@ -2117,6 +2243,7 @@ define('dummy/templates/component-demos/breadcrumbs', ['exports'], function (exp
   exports['default'] = Ember.HTMLBars.template((function() {
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -2184,6 +2311,8 @@ define('dummy/templates/component-demos/breadcrumbs', ['exports'], function (exp
         dom.appendChild(el3, el4);
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n    ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n  ");
         dom.appendChild(el2, el3);
@@ -2261,7 +2390,7 @@ define('dummy/templates/component-demos/breadcrumbs', ['exports'], function (exp
         } else {
           fragment = this.build(dom);
         }
-        var morph0 = dom.createMorphAt(dom.childAt(fragment, [8, 3]),2,3);
+        var morph0 = dom.createMorphAt(dom.childAt(fragment, [8, 3]),3,3);
         content(env, morph0, context, "f-breadcrumbs");
         return fragment;
       }
@@ -2277,11 +2406,14 @@ define('dummy/templates/component-demos/buttons', ['exports'], function (exports
     var child0 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Tiny Button");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Tiny Button");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -2310,11 +2442,14 @@ define('dummy/templates/component-demos/buttons', ['exports'], function (exports
     var child1 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Radius Alert Button");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Radius Alert Button");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -2343,11 +2478,14 @@ define('dummy/templates/component-demos/buttons', ['exports'], function (exports
     var child2 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Disabled Expanded Button");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Disabled Expanded Button");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -2376,11 +2514,14 @@ define('dummy/templates/component-demos/buttons', ['exports'], function (exports
     var child3 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Dropdowns");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Dropdowns");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -2409,11 +2550,14 @@ define('dummy/templates/component-demos/buttons', ['exports'], function (exports
     var child4 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Reveal Modal");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Reveal Modal");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -2441,6 +2585,7 @@ define('dummy/templates/component-demos/buttons', ['exports'], function (exports
     }());
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -2509,6 +2654,8 @@ define('dummy/templates/component-demos/buttons', ['exports'], function (exports
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n    ");
         dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n  ");
         dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
@@ -2552,6 +2699,8 @@ define('dummy/templates/component-demos/buttons', ['exports'], function (exports
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n    ");
         dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n  ");
         dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
@@ -2594,6 +2743,8 @@ define('dummy/templates/component-demos/buttons', ['exports'], function (exports
         dom.appendChild(el3, el4);
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n    ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n  ");
         dom.appendChild(el2, el3);
@@ -2664,6 +2815,8 @@ define('dummy/templates/component-demos/buttons', ['exports'], function (exports
         var el2 = dom.createElement("dd");
         var el3 = dom.createTextNode("An id string of a dropdown to toggle open. See ");
         dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
         var el3 = dom.createTextNode(".");
         dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
@@ -2682,6 +2835,8 @@ define('dummy/templates/component-demos/buttons', ['exports'], function (exports
         dom.appendChild(el1, el2);
         var el2 = dom.createElement("dd");
         var el3 = dom.createTextNode("An id string of a modal to reveal. See ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode(".");
         dom.appendChild(el2, el3);
@@ -2714,11 +2869,11 @@ define('dummy/templates/component-demos/buttons', ['exports'], function (exports
           fragment = this.build(dom);
         }
         var element0 = dom.childAt(fragment, [18]);
-        var morph0 = dom.createMorphAt(dom.childAt(fragment, [8, 3]),2,3);
-        var morph1 = dom.createMorphAt(dom.childAt(fragment, [10, 3]),2,3);
-        var morph2 = dom.createMorphAt(dom.childAt(fragment, [12, 3]),2,3);
-        var morph3 = dom.createMorphAt(dom.childAt(element0, [11]),0,1);
-        var morph4 = dom.createMorphAt(dom.childAt(element0, [15]),0,1);
+        var morph0 = dom.createMorphAt(dom.childAt(fragment, [8, 3]),3,3);
+        var morph1 = dom.createMorphAt(dom.childAt(fragment, [10, 3]),3,3);
+        var morph2 = dom.createMorphAt(dom.childAt(fragment, [12, 3]),3,3);
+        var morph3 = dom.createMorphAt(dom.childAt(element0, [11]),1,1);
+        var morph4 = dom.createMorphAt(dom.childAt(element0, [15]),1,1);
         block(env, morph0, context, "f-button", [], {"class": "tiny"}, child0, null);
         block(env, morph1, context, "f-button", [], {"class": "radius alert"}, child1, null);
         block(env, morph2, context, "f-button", [], {"class": "disabled expand"}, child2, null);
@@ -2738,6 +2893,7 @@ define('dummy/templates/component-demos/clearing', ['exports'], function (export
     var child0 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -2745,9 +2901,15 @@ define('dummy/templates/component-demos/clearing', ['exports'], function (export
           var el0 = dom.createDocumentFragment();
           var el1 = dom.createTextNode("        ");
           dom.appendChild(el0, el1);
-          var el1 = dom.createTextNode("\n\n        ");
+          var el1 = dom.createComment("");
           dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n\n        ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createComment("");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n\n        ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createComment("");
           dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n");
           dom.appendChild(el0, el1);
@@ -2773,9 +2935,9 @@ define('dummy/templates/component-demos/clearing', ['exports'], function (export
           } else {
             fragment = this.build(dom);
           }
-          var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
-          var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
-          var morph2 = dom.createMorphAt(fragment,2,3,contextualElement);
+          var morph0 = dom.createMorphAt(fragment,1,1,contextualElement);
+          var morph1 = dom.createMorphAt(fragment,3,3,contextualElement);
+          var morph2 = dom.createMorphAt(fragment,5,5,contextualElement);
           inline(env, morph0, context, "f-clearing-image", [], {"alt": "Comet image", "caption": "This is the comet image.", "thumbnail": "http://foundation.zurb.com/docs/assets/img/examples/comet-th-sm.jpg", "url": "http://foundation.zurb.com/docs/assets/img/examples/comet.jpg"});
           inline(env, morph1, context, "f-clearing-image", [], {"alt": "Earth image", "thumbnail": "http://foundation.zurb.com/docs/assets/img/examples/earth-th-sm.jpg", "url": "http://foundation.zurb.com/docs/assets/img/examples/earth.jpg"});
           inline(env, morph2, context, "f-clearing-image", [], {"alt": "Launch image", "caption": "This is the launch image.", "thumbnail": "http://foundation.zurb.com/docs/assets/img/examples/launch-th-sm.jpg", "url": "http://foundation.zurb.com/docs/assets/img/examples/launch.jpg"});
@@ -2785,6 +2947,7 @@ define('dummy/templates/component-demos/clearing', ['exports'], function (export
     }());
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -2852,6 +3015,8 @@ define('dummy/templates/component-demos/clearing', ['exports'], function (export
         dom.appendChild(el3, el4);
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("  ");
         dom.appendChild(el2, el3);
@@ -3018,7 +3183,7 @@ define('dummy/templates/component-demos/clearing', ['exports'], function (export
         } else {
           fragment = this.build(dom);
         }
-        var morph0 = dom.createMorphAt(dom.childAt(fragment, [8, 3]),2,3);
+        var morph0 = dom.createMorphAt(dom.childAt(fragment, [8, 3]),3,3);
         block(env, morph0, context, "f-clearing", [], {}, child0, null);
         return fragment;
       }
@@ -3034,11 +3199,14 @@ define('dummy/templates/component-demos/dropdowns', ['exports'], function (expor
     var child0 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Link Dropdown »");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Link Dropdown »");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -3067,6 +3235,7 @@ define('dummy/templates/component-demos/dropdowns', ['exports'], function (expor
     var child1 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -3126,6 +3295,7 @@ define('dummy/templates/component-demos/dropdowns', ['exports'], function (expor
     var child2 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -3173,11 +3343,14 @@ define('dummy/templates/component-demos/dropdowns', ['exports'], function (expor
     var child3 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Content Dropdown »");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Content Dropdown »");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -3205,6 +3378,7 @@ define('dummy/templates/component-demos/dropdowns', ['exports'], function (expor
     }());
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -3273,7 +3447,11 @@ define('dummy/templates/component-demos/dropdowns', ['exports'], function (expor
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n\n    ");
         dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n\n");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("  ");
         dom.appendChild(el2, el3);
@@ -3318,7 +3496,11 @@ define('dummy/templates/component-demos/dropdowns', ['exports'], function (expor
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n\n");
         dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n    ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n  ");
         dom.appendChild(el2, el3);
@@ -3422,10 +3604,10 @@ define('dummy/templates/component-demos/dropdowns', ['exports'], function (expor
         }
         var element0 = dom.childAt(fragment, [8, 3]);
         var element1 = dom.childAt(fragment, [10, 3]);
-        var morph0 = dom.createMorphAt(element0,2,3);
-        var morph1 = dom.createMorphAt(element0,3,4);
-        var morph2 = dom.createMorphAt(element1,2,3);
-        var morph3 = dom.createMorphAt(element1,3,4);
+        var morph0 = dom.createMorphAt(element0,3,3);
+        var morph1 = dom.createMorphAt(element0,5,5);
+        var morph2 = dom.createMorphAt(element1,3,3);
+        var morph3 = dom.createMorphAt(element1,5,5);
         block(env, morph0, context, "f-button", [], {"dropdown": "dropdownDemo1"}, child0, null);
         block(env, morph1, context, "f-dropdown", [], {"id": "dropdownDemo1"}, child1, null);
         block(env, morph2, context, "f-dropdown", [], {"content": true, "id": "dropdownDemo2"}, child2, null);
@@ -3444,11 +3626,14 @@ define('dummy/templates/component-demos/index', ['exports'], function (exports) 
     var child0 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Accordion");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Accordion");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -3477,11 +3662,14 @@ define('dummy/templates/component-demos/index', ['exports'], function (exports) 
     var child1 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Alerts");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Alerts");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -3510,11 +3698,14 @@ define('dummy/templates/component-demos/index', ['exports'], function (exports) 
     var child2 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Breadcrumbs");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Breadcrumbs");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -3543,11 +3734,14 @@ define('dummy/templates/component-demos/index', ['exports'], function (exports) 
     var child3 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Buttons");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Buttons");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -3576,11 +3770,14 @@ define('dummy/templates/component-demos/index', ['exports'], function (exports) 
     var child4 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Clearing");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Clearing");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -3609,11 +3806,14 @@ define('dummy/templates/component-demos/index', ['exports'], function (exports) 
     var child5 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Dropdowns");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Dropdowns");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -3642,11 +3842,14 @@ define('dummy/templates/component-demos/index', ['exports'], function (exports) 
     var child6 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Joyride");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Joyride");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -3675,11 +3878,14 @@ define('dummy/templates/component-demos/index', ['exports'], function (exports) 
     var child7 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Magellan");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Magellan");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -3708,11 +3914,14 @@ define('dummy/templates/component-demos/index', ['exports'], function (exports) 
     var child8 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Pagination");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Pagination");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -3741,11 +3950,14 @@ define('dummy/templates/component-demos/index', ['exports'], function (exports) 
     var child9 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Progress Bars");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Progress Bars");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -3774,11 +3986,14 @@ define('dummy/templates/component-demos/index', ['exports'], function (exports) 
     var child10 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Reveal Modal");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Reveal Modal");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -3807,11 +4022,14 @@ define('dummy/templates/component-demos/index', ['exports'], function (exports) 
     var child11 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Sliders");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Sliders");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -3840,11 +4058,14 @@ define('dummy/templates/component-demos/index', ['exports'], function (exports) 
     var child12 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Switches");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Switches");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -3873,11 +4094,14 @@ define('dummy/templates/component-demos/index', ['exports'], function (exports) 
     var child13 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Tabs");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Tabs");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -3906,11 +4130,14 @@ define('dummy/templates/component-demos/index', ['exports'], function (exports) 
     var child14 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Tooltips");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Tooltips");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -3938,6 +4165,7 @@ define('dummy/templates/component-demos/index', ['exports'], function (exports) 
     }());
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -3953,62 +4181,92 @@ define('dummy/templates/component-demos/index', ['exports'], function (exports) 
         var el2 = dom.createTextNode("\n  ");
         dom.appendChild(el1, el2);
         var el2 = dom.createElement("li");
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n  ");
         dom.appendChild(el1, el2);
         var el2 = dom.createElement("li");
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n  ");
         dom.appendChild(el1, el2);
         var el2 = dom.createElement("li");
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n  ");
         dom.appendChild(el1, el2);
         var el2 = dom.createElement("li");
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n  ");
         dom.appendChild(el1, el2);
         var el2 = dom.createElement("li");
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n  ");
         dom.appendChild(el1, el2);
         var el2 = dom.createElement("li");
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n  ");
         dom.appendChild(el1, el2);
         var el2 = dom.createElement("li");
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n  ");
         dom.appendChild(el1, el2);
         var el2 = dom.createElement("li");
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n  ");
         dom.appendChild(el1, el2);
         var el2 = dom.createElement("li");
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n  ");
         dom.appendChild(el1, el2);
         var el2 = dom.createElement("li");
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n  ");
         dom.appendChild(el1, el2);
         var el2 = dom.createElement("li");
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n  ");
         dom.appendChild(el1, el2);
         var el2 = dom.createElement("li");
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n  ");
         dom.appendChild(el1, el2);
         var el2 = dom.createElement("li");
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n  ");
         dom.appendChild(el1, el2);
         var el2 = dom.createElement("li");
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n  ");
         dom.appendChild(el1, el2);
         var el2 = dom.createElement("li");
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n");
         dom.appendChild(el1, el2);
@@ -4038,21 +4296,21 @@ define('dummy/templates/component-demos/index', ['exports'], function (exports) 
           fragment = this.build(dom);
         }
         var element0 = dom.childAt(fragment, [2]);
-        var morph0 = dom.createMorphAt(dom.childAt(element0, [1]),-1,-1);
-        var morph1 = dom.createMorphAt(dom.childAt(element0, [3]),-1,-1);
-        var morph2 = dom.createMorphAt(dom.childAt(element0, [5]),-1,-1);
-        var morph3 = dom.createMorphAt(dom.childAt(element0, [7]),-1,-1);
-        var morph4 = dom.createMorphAt(dom.childAt(element0, [9]),-1,-1);
-        var morph5 = dom.createMorphAt(dom.childAt(element0, [11]),-1,-1);
-        var morph6 = dom.createMorphAt(dom.childAt(element0, [13]),-1,-1);
-        var morph7 = dom.createMorphAt(dom.childAt(element0, [15]),-1,-1);
-        var morph8 = dom.createMorphAt(dom.childAt(element0, [17]),-1,-1);
-        var morph9 = dom.createMorphAt(dom.childAt(element0, [19]),-1,-1);
-        var morph10 = dom.createMorphAt(dom.childAt(element0, [21]),-1,-1);
-        var morph11 = dom.createMorphAt(dom.childAt(element0, [23]),-1,-1);
-        var morph12 = dom.createMorphAt(dom.childAt(element0, [25]),-1,-1);
-        var morph13 = dom.createMorphAt(dom.childAt(element0, [27]),-1,-1);
-        var morph14 = dom.createMorphAt(dom.childAt(element0, [29]),-1,-1);
+        var morph0 = dom.createMorphAt(dom.childAt(element0, [1]),0,0);
+        var morph1 = dom.createMorphAt(dom.childAt(element0, [3]),0,0);
+        var morph2 = dom.createMorphAt(dom.childAt(element0, [5]),0,0);
+        var morph3 = dom.createMorphAt(dom.childAt(element0, [7]),0,0);
+        var morph4 = dom.createMorphAt(dom.childAt(element0, [9]),0,0);
+        var morph5 = dom.createMorphAt(dom.childAt(element0, [11]),0,0);
+        var morph6 = dom.createMorphAt(dom.childAt(element0, [13]),0,0);
+        var morph7 = dom.createMorphAt(dom.childAt(element0, [15]),0,0);
+        var morph8 = dom.createMorphAt(dom.childAt(element0, [17]),0,0);
+        var morph9 = dom.createMorphAt(dom.childAt(element0, [19]),0,0);
+        var morph10 = dom.createMorphAt(dom.childAt(element0, [21]),0,0);
+        var morph11 = dom.createMorphAt(dom.childAt(element0, [23]),0,0);
+        var morph12 = dom.createMorphAt(dom.childAt(element0, [25]),0,0);
+        var morph13 = dom.createMorphAt(dom.childAt(element0, [27]),0,0);
+        var morph14 = dom.createMorphAt(dom.childAt(element0, [29]),0,0);
         block(env, morph0, context, "link-to", ["component-demos.accordion"], {}, child0, null);
         block(env, morph1, context, "link-to", ["component-demos.alerts"], {}, child1, null);
         block(env, morph2, context, "link-to", ["component-demos.breadcrumbs"], {}, child2, null);
@@ -4082,11 +4340,14 @@ define('dummy/templates/component-demos/joyride', ['exports'], function (exports
     var child0 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Start Joyride Demo");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Start Joyride Demo");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -4116,6 +4377,7 @@ define('dummy/templates/component-demos/joyride', ['exports'], function (exports
       var child0 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
@@ -4157,6 +4419,7 @@ define('dummy/templates/component-demos/joyride', ['exports'], function (exports
       var child1 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
@@ -4204,6 +4467,7 @@ define('dummy/templates/component-demos/joyride', ['exports'], function (exports
       var child2 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
@@ -4250,6 +4514,7 @@ define('dummy/templates/component-demos/joyride', ['exports'], function (exports
       }());
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -4257,9 +4522,15 @@ define('dummy/templates/component-demos/joyride', ['exports'], function (exports
           var el0 = dom.createDocumentFragment();
           var el1 = dom.createTextNode("\n");
           dom.appendChild(el0, el1);
-          var el1 = dom.createTextNode("\n");
+          var el1 = dom.createComment("");
           dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createComment("");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createComment("");
           dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n");
           dom.appendChild(el0, el1);
@@ -4285,9 +4556,9 @@ define('dummy/templates/component-demos/joyride', ['exports'], function (exports
           } else {
             fragment = this.build(dom);
           }
-          var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
-          var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
-          var morph2 = dom.createMorphAt(fragment,2,3,contextualElement);
+          var morph0 = dom.createMorphAt(fragment,1,1,contextualElement);
+          var morph1 = dom.createMorphAt(fragment,3,3,contextualElement);
+          var morph2 = dom.createMorphAt(fragment,5,5,contextualElement);
           block(env, morph0, context, "f-stop", [], {"at": "joyrideDemoStop1", "nextText": "Cool"}, child0, null);
           block(env, morph1, context, "f-stop", [], {"at": "joyrideDemoStop2", "nextText": "Okay"}, child1, null);
           block(env, morph2, context, "f-stop", [], {"button": "End"}, child2, null);
@@ -4297,6 +4568,7 @@ define('dummy/templates/component-demos/joyride', ['exports'], function (exports
     }());
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -4365,7 +4637,11 @@ define('dummy/templates/component-demos/joyride', ['exports'], function (exports
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n\n    ");
         dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n\n");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("  ");
         dom.appendChild(el2, el3);
@@ -4500,8 +4776,8 @@ define('dummy/templates/component-demos/joyride', ['exports'], function (exports
           fragment = this.build(dom);
         }
         var element0 = dom.childAt(fragment, [8, 3]);
-        var morph0 = dom.createMorphAt(element0,2,3);
-        var morph1 = dom.createMorphAt(element0,3,4);
+        var morph0 = dom.createMorphAt(element0,3,3);
+        var morph1 = dom.createMorphAt(element0,5,5);
         block(env, morph0, context, "f-button", [], {"action": "startDemo"}, child0, null);
         block(env, morph1, context, "f-joyride", [], {"start": get(env, context, "startDemo")}, child1, null);
         return fragment;
@@ -4519,11 +4795,14 @@ define('dummy/templates/component-demos/magellan', ['exports'], function (export
       var child0 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
-            var el0 = dom.createTextNode("        F-Magellan Properties\n");
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("        F-Magellan Properties\n");
+            dom.appendChild(el0, el1);
             return el0;
           },
           render: function render(context, env, contextualElement) {
@@ -4552,11 +4831,14 @@ define('dummy/templates/component-demos/magellan', ['exports'], function (export
       var child1 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
-            var el0 = dom.createTextNode("        F-Arrival Properties\n");
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("        F-Arrival Properties\n");
+            dom.appendChild(el0, el1);
             return el0;
           },
           render: function render(context, env, contextualElement) {
@@ -4584,6 +4866,7 @@ define('dummy/templates/component-demos/magellan', ['exports'], function (export
       }());
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -4591,7 +4874,11 @@ define('dummy/templates/component-demos/magellan', ['exports'], function (export
           var el0 = dom.createDocumentFragment();
           var el1 = dom.createTextNode("\n");
           dom.appendChild(el0, el1);
+          var el1 = dom.createComment("");
+          dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createComment("");
           dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n");
           dom.appendChild(el0, el1);
@@ -4617,8 +4904,8 @@ define('dummy/templates/component-demos/magellan', ['exports'], function (export
           } else {
             fragment = this.build(dom);
           }
-          var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
-          var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
+          var morph0 = dom.createMorphAt(fragment,1,1,contextualElement);
+          var morph1 = dom.createMorphAt(fragment,3,3,contextualElement);
           block(env, morph0, context, "f-arrival", [], {"href": "#fMagellanProperties", "name": "magellan"}, child0, null);
           block(env, morph1, context, "f-arrival", [], {"href": "#fArrivalProperties", "name": "arrival"}, child1, null);
           return fragment;
@@ -4627,6 +4914,7 @@ define('dummy/templates/component-demos/magellan', ['exports'], function (export
     }());
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -4694,6 +4982,8 @@ define('dummy/templates/component-demos/magellan', ['exports'], function (export
         dom.appendChild(el3, el4);
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n\n");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("  ");
         dom.appendChild(el2, el3);
@@ -4807,7 +5097,7 @@ define('dummy/templates/component-demos/magellan', ['exports'], function (export
         } else {
           fragment = this.build(dom);
         }
-        var morph0 = dom.createMorphAt(dom.childAt(fragment, [8, 3]),2,3);
+        var morph0 = dom.createMorphAt(dom.childAt(fragment, [8, 3]),3,3);
         block(env, morph0, context, "f-magellan", [], {}, child0, null);
         return fragment;
       }
@@ -4822,6 +5112,7 @@ define('dummy/templates/component-demos/pagination', ['exports'], function (expo
   exports['default'] = Ember.HTMLBars.template((function() {
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -4889,6 +5180,8 @@ define('dummy/templates/component-demos/pagination', ['exports'], function (expo
         dom.appendChild(el3, el4);
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n    ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n  ");
         dom.appendChild(el2, el3);
@@ -5001,7 +5294,7 @@ define('dummy/templates/component-demos/pagination', ['exports'], function (expo
         } else {
           fragment = this.build(dom);
         }
-        var morph0 = dom.createMorphAt(dom.childAt(fragment, [8, 3]),2,3);
+        var morph0 = dom.createMorphAt(dom.childAt(fragment, [8, 3]),3,3);
         inline(env, morph0, context, "f-pagination", [], {"currentPage": 3, "totalPages": 10});
         return fragment;
       }
@@ -5016,6 +5309,7 @@ define('dummy/templates/component-demos/progress-bars', ['exports'], function (e
   exports['default'] = Ember.HTMLBars.template((function() {
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -5084,6 +5378,8 @@ define('dummy/templates/component-demos/progress-bars', ['exports'], function (e
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n    ");
         dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n  ");
         dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
@@ -5126,6 +5422,8 @@ define('dummy/templates/component-demos/progress-bars', ['exports'], function (e
         dom.appendChild(el3, el4);
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n    ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n  ");
         dom.appendChild(el2, el3);
@@ -5170,6 +5468,8 @@ define('dummy/templates/component-demos/progress-bars', ['exports'], function (e
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n    ");
         dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n  ");
         dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
@@ -5212,6 +5512,8 @@ define('dummy/templates/component-demos/progress-bars', ['exports'], function (e
         dom.appendChild(el3, el4);
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n    ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n  ");
         dom.appendChild(el2, el3);
@@ -5283,10 +5585,10 @@ define('dummy/templates/component-demos/progress-bars', ['exports'], function (e
         } else {
           fragment = this.build(dom);
         }
-        var morph0 = dom.createMorphAt(dom.childAt(fragment, [8, 3]),2,3);
-        var morph1 = dom.createMorphAt(dom.childAt(fragment, [10, 3]),2,3);
-        var morph2 = dom.createMorphAt(dom.childAt(fragment, [12, 3]),2,3);
-        var morph3 = dom.createMorphAt(dom.childAt(fragment, [14, 3]),2,3);
+        var morph0 = dom.createMorphAt(dom.childAt(fragment, [8, 3]),3,3);
+        var morph1 = dom.createMorphAt(dom.childAt(fragment, [10, 3]),3,3);
+        var morph2 = dom.createMorphAt(dom.childAt(fragment, [12, 3]),3,3);
+        var morph3 = dom.createMorphAt(dom.childAt(fragment, [14, 3]),3,3);
         inline(env, morph0, context, "f-progress-bar", [], {"class": "large-6", "value": 40});
         inline(env, morph1, context, "f-progress-bar", [], {"class": "large-8 radius success", "value": 80});
         inline(env, morph2, context, "f-progress-bar", [], {"class": "large-10 nice round alert", "value": 30});
@@ -5305,11 +5607,14 @@ define('dummy/templates/component-demos/reveal-modal', ['exports'], function (ex
     var child0 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Open Modal…");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Open Modal…");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -5338,6 +5643,7 @@ define('dummy/templates/component-demos/reveal-modal', ['exports'], function (ex
     var child1 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -5378,6 +5684,7 @@ define('dummy/templates/component-demos/reveal-modal', ['exports'], function (ex
     }());
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -5446,7 +5753,11 @@ define('dummy/templates/component-demos/reveal-modal', ['exports'], function (ex
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n\n    ");
         dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n\n");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("  ");
         dom.appendChild(el2, el3);
@@ -5523,8 +5834,8 @@ define('dummy/templates/component-demos/reveal-modal', ['exports'], function (ex
           fragment = this.build(dom);
         }
         var element0 = dom.childAt(fragment, [8, 3]);
-        var morph0 = dom.createMorphAt(element0,2,3);
-        var morph1 = dom.createMorphAt(element0,3,4);
+        var morph0 = dom.createMorphAt(element0,3,3);
+        var morph1 = dom.createMorphAt(element0,5,5);
         block(env, morph0, context, "f-button", [], {"class": "radius", "revealId": "modalDemo"}, child0, null);
         block(env, morph1, context, "f-reveal-modal", [], {"id": "modalDemo"}, child1, null);
         return fragment;
@@ -5540,6 +5851,7 @@ define('dummy/templates/component-demos/sliders', ['exports'], function (exports
   exports['default'] = Ember.HTMLBars.template((function() {
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -5608,6 +5920,8 @@ define('dummy/templates/component-demos/sliders', ['exports'], function (exports
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n    ");
         dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n  ");
         dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
@@ -5650,6 +5964,8 @@ define('dummy/templates/component-demos/sliders', ['exports'], function (exports
         dom.appendChild(el3, el4);
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n    ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n  ");
         dom.appendChild(el2, el3);
@@ -5694,6 +6010,8 @@ define('dummy/templates/component-demos/sliders', ['exports'], function (exports
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n    ");
         dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n  ");
         dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
@@ -5736,6 +6054,8 @@ define('dummy/templates/component-demos/sliders', ['exports'], function (exports
         dom.appendChild(el3, el4);
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n    ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n  ");
         dom.appendChild(el2, el3);
@@ -5800,10 +6120,10 @@ define('dummy/templates/component-demos/sliders', ['exports'], function (exports
         } else {
           fragment = this.build(dom);
         }
-        var morph0 = dom.createMorphAt(dom.childAt(fragment, [8, 3]),2,3);
-        var morph1 = dom.createMorphAt(dom.childAt(fragment, [10, 3]),2,3);
-        var morph2 = dom.createMorphAt(dom.childAt(fragment, [12, 3]),2,3);
-        var morph3 = dom.createMorphAt(dom.childAt(fragment, [14, 3]),2,3);
+        var morph0 = dom.createMorphAt(dom.childAt(fragment, [8, 3]),3,3);
+        var morph1 = dom.createMorphAt(dom.childAt(fragment, [10, 3]),3,3);
+        var morph2 = dom.createMorphAt(dom.childAt(fragment, [12, 3]),3,3);
+        var morph3 = dom.createMorphAt(dom.childAt(fragment, [14, 3]),3,3);
         content(env, morph0, context, "f-slider");
         inline(env, morph1, context, "f-slider", [], {"class": "radius"});
         inline(env, morph2, context, "f-slider", [], {"class": "round"});
@@ -5821,6 +6141,7 @@ define('dummy/templates/component-demos/switches', ['exports'], function (export
   exports['default'] = Ember.HTMLBars.template((function() {
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -5900,6 +6221,8 @@ define('dummy/templates/component-demos/switches', ['exports'], function (export
         dom.appendChild(el3, el4);
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n    ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n  ");
         dom.appendChild(el2, el3);
@@ -6034,6 +6357,8 @@ define('dummy/templates/component-demos/switches', ['exports'], function (export
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n    ");
         dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n  ");
         dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
@@ -6120,8 +6445,8 @@ define('dummy/templates/component-demos/switches', ['exports'], function (export
         } else {
           fragment = this.build(dom);
         }
-        var morph0 = dom.createMorphAt(dom.childAt(fragment, [12, 3]),2,3);
-        var morph1 = dom.createMorphAt(dom.childAt(fragment, [28, 3]),2,3);
+        var morph0 = dom.createMorphAt(dom.childAt(fragment, [12, 3]),3,3);
+        var morph1 = dom.createMorphAt(dom.childAt(fragment, [28, 3]),3,3);
         inline(env, morph0, context, "f-switch", [], {"value": get(env, context, "switchDemoValue")});
         inline(env, morph1, context, "f-switches", [], {"name": "switches-demo", "options": get(env, context, "switchesOptions"), "value": get(env, context, "switchesValue")});
         return fragment;
@@ -6139,6 +6464,7 @@ define('dummy/templates/component-demos/tabs', ['exports'], function (exports) {
       var child0 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
@@ -6180,6 +6506,7 @@ define('dummy/templates/component-demos/tabs', ['exports'], function (exports) {
       var child1 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
@@ -6221,6 +6548,7 @@ define('dummy/templates/component-demos/tabs', ['exports'], function (exports) {
       var child2 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
@@ -6261,6 +6589,7 @@ define('dummy/templates/component-demos/tabs', ['exports'], function (exports) {
       }());
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -6268,9 +6597,15 @@ define('dummy/templates/component-demos/tabs', ['exports'], function (exports) {
           var el0 = dom.createDocumentFragment();
           var el1 = dom.createTextNode("\n");
           dom.appendChild(el0, el1);
-          var el1 = dom.createTextNode("\n");
+          var el1 = dom.createComment("");
           dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createComment("");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createComment("");
           dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n");
           dom.appendChild(el0, el1);
@@ -6296,9 +6631,9 @@ define('dummy/templates/component-demos/tabs', ['exports'], function (exports) {
           } else {
             fragment = this.build(dom);
           }
-          var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
-          var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
-          var morph2 = dom.createMorphAt(fragment,2,3,contextualElement);
+          var morph0 = dom.createMorphAt(fragment,1,1,contextualElement);
+          var morph1 = dom.createMorphAt(fragment,3,3,contextualElement);
+          var morph2 = dom.createMorphAt(fragment,5,5,contextualElement);
           block(env, morph0, context, "f-tab-pane", [], {"id": "demoTab1", "title": "Tab 1"}, child0, null);
           block(env, morph1, context, "f-tab-pane", [], {"id": "demoTab2", "title": "Tab 2"}, child1, null);
           block(env, morph2, context, "f-tab-pane", [], {"id": "demoTab3", "title": "Tab 3"}, child2, null);
@@ -6308,6 +6643,7 @@ define('dummy/templates/component-demos/tabs', ['exports'], function (exports) {
     }());
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -6375,6 +6711,8 @@ define('dummy/templates/component-demos/tabs', ['exports'], function (exports) {
         dom.appendChild(el3, el4);
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("  ");
         dom.appendChild(el2, el3);
@@ -6474,7 +6812,7 @@ define('dummy/templates/component-demos/tabs', ['exports'], function (exports) {
         } else {
           fragment = this.build(dom);
         }
-        var morph0 = dom.createMorphAt(dom.childAt(fragment, [8, 3]),2,3);
+        var morph0 = dom.createMorphAt(dom.childAt(fragment, [8, 3]),3,3);
         block(env, morph0, context, "f-tab-panel", [], {}, child0, null);
         return fragment;
       }
@@ -6490,11 +6828,14 @@ define('dummy/templates/component-demos/tooltips', ['exports'], function (export
     var child0 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("      Bottom tooltip (default)\n");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("      Bottom tooltip (default)\n");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -6523,11 +6864,14 @@ define('dummy/templates/component-demos/tooltips', ['exports'], function (export
     var child1 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("      Hello there\n");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("      Hello there\n");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -6555,6 +6899,7 @@ define('dummy/templates/component-demos/tooltips', ['exports'], function (export
     }());
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -6623,6 +6968,8 @@ define('dummy/templates/component-demos/tooltips', ['exports'], function (export
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n");
         dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("  ");
         dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
@@ -6665,6 +7012,8 @@ define('dummy/templates/component-demos/tooltips', ['exports'], function (export
         dom.appendChild(el3, el4);
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("  ");
         dom.appendChild(el2, el3);
@@ -6777,8 +7126,8 @@ define('dummy/templates/component-demos/tooltips', ['exports'], function (export
         } else {
           fragment = this.build(dom);
         }
-        var morph0 = dom.createMorphAt(dom.childAt(fragment, [8, 3]),2,3);
-        var morph1 = dom.createMorphAt(dom.childAt(fragment, [10, 3]),2,3);
+        var morph0 = dom.createMorphAt(dom.childAt(fragment, [8, 3]),3,3);
+        var morph1 = dom.createMorphAt(dom.childAt(fragment, [10, 3]),3,3);
         block(env, morph0, context, "f-tooltip", [], {"title": "I'm on bottom!", "width": 210}, child0, null);
         block(env, morph1, context, "f-tooltip", [], {"class": "noradius", "position": "top", "tagName": "h3", "title": "I'm on top and not rounded!", "width": 210}, child1, null);
         return fragment;
@@ -6794,18 +7143,23 @@ define('dummy/templates/components/f-accordion-panel', ['exports'], function (ex
   exports['default'] = Ember.HTMLBars.template((function() {
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
       build: function build(dom) {
         var el0 = dom.createDocumentFragment();
         var el1 = dom.createElement("a");
+        var el2 = dom.createComment("");
+        dom.appendChild(el1, el2);
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
         var el1 = dom.createElement("div");
         dom.setAttribute(el1,"class","content");
         var el2 = dom.createTextNode("\n  ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createComment("");
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n");
         dom.appendChild(el1, el2);
@@ -6836,8 +7190,8 @@ define('dummy/templates/components/f-accordion-panel', ['exports'], function (ex
         }
         var element0 = dom.childAt(fragment, [0]);
         var element1 = dom.childAt(fragment, [2]);
-        var morph0 = dom.createMorphAt(element0,-1,-1);
-        var morph1 = dom.createMorphAt(element1,0,1);
+        var morph0 = dom.createMorphAt(element0,0,0);
+        var morph1 = dom.createMorphAt(element1,1,1);
         element(env, element0, context, "bind-attr", [], {"href": get(env, context, "href")});
         content(env, morph0, context, "title");
         element(env, element1, context, "bind-attr", [], {"id": get(env, context, "panelId")});
@@ -6855,12 +7209,13 @@ define('dummy/templates/components/f-accordion', ['exports'], function (exports)
   exports['default'] = Ember.HTMLBars.template((function() {
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
       build: function build(dom) {
         var el0 = dom.createDocumentFragment();
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
@@ -6886,8 +7241,8 @@ define('dummy/templates/components/f-accordion', ['exports'], function (exports)
         } else {
           fragment = this.build(dom);
         }
-        if (this.cachedFragment) { dom.repairClonedNode(fragment,[0]); }
-        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+        var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+        dom.insertBoundary(fragment, 0);
         content(env, morph0, context, "yield");
         return fragment;
       }
@@ -6902,12 +7257,13 @@ define('dummy/templates/components/f-alert', ['exports'], function (exports) {
   exports['default'] = Ember.HTMLBars.template((function() {
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
       build: function build(dom) {
         var el0 = dom.createDocumentFragment();
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
@@ -6941,8 +7297,8 @@ define('dummy/templates/components/f-alert', ['exports'], function (exports) {
         } else {
           fragment = this.build(dom);
         }
-        if (this.cachedFragment) { dom.repairClonedNode(fragment,[0]); }
-        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+        var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+        dom.insertBoundary(fragment, 0);
         content(env, morph0, context, "yield");
         return fragment;
       }
@@ -6957,12 +7313,15 @@ define('dummy/templates/components/f-arrival', ['exports'], function (exports) {
   exports['default'] = Ember.HTMLBars.template((function() {
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
       build: function build(dom) {
         var el0 = dom.createDocumentFragment();
         var el1 = dom.createElement("a");
+        var el2 = dom.createComment("");
+        dom.appendChild(el1, el2);
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
@@ -6989,7 +7348,7 @@ define('dummy/templates/components/f-arrival', ['exports'], function (exports) {
           fragment = this.build(dom);
         }
         var element0 = dom.childAt(fragment, [0]);
-        var morph0 = dom.createMorphAt(element0,-1,-1);
+        var morph0 = dom.createMorphAt(element0,0,0);
         element(env, element0, context, "bind-attr", [], {"href": get(env, context, "href")});
         content(env, morph0, context, "yield");
         return fragment;
@@ -7007,12 +7366,15 @@ define('dummy/templates/components/f-breadcrumbs', ['exports'], function (export
       var child0 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
             var el0 = dom.createDocumentFragment();
             var el1 = dom.createTextNode("      ");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createComment("");
             dom.appendChild(el0, el1);
             var el1 = dom.createTextNode("\n");
             dom.appendChild(el0, el1);
@@ -7038,7 +7400,7 @@ define('dummy/templates/components/f-breadcrumbs', ['exports'], function (export
             } else {
               fragment = this.build(dom);
             }
-            var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+            var morph0 = dom.createMorphAt(fragment,1,1,contextualElement);
             content(env, morph0, context, "crumb.name");
             return fragment;
           }
@@ -7046,6 +7408,7 @@ define('dummy/templates/components/f-breadcrumbs', ['exports'], function (export
       }());
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -7055,6 +7418,8 @@ define('dummy/templates/components/f-breadcrumbs', ['exports'], function (export
           dom.appendChild(el0, el1);
           var el1 = dom.createElement("li");
           var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createComment("");
           dom.appendChild(el1, el2);
           var el2 = dom.createTextNode("  ");
           dom.appendChild(el1, el2);
@@ -7084,7 +7449,7 @@ define('dummy/templates/components/f-breadcrumbs', ['exports'], function (export
             fragment = this.build(dom);
           }
           var element0 = dom.childAt(fragment, [1]);
-          var morph0 = dom.createMorphAt(element0,0,1);
+          var morph0 = dom.createMorphAt(element0,1,1);
           element(env, element0, context, "bind-attr", [], {"class": "crumb.isCurrent:current:"});
           block(env, morph0, context, "link-to", [get(env, context, "crumb.path")], {}, child0, null);
           return fragment;
@@ -7093,14 +7458,13 @@ define('dummy/templates/components/f-breadcrumbs', ['exports'], function (export
     }());
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
       build: function build(dom) {
         var el0 = dom.createDocumentFragment();
-        var el1 = dom.createTextNode("");
-        dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         return el0;
       },
@@ -7124,8 +7488,9 @@ define('dummy/templates/components/f-breadcrumbs', ['exports'], function (export
         } else {
           fragment = this.build(dom);
         }
-        if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,1]); }
-        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+        var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+        dom.insertBoundary(fragment, null);
+        dom.insertBoundary(fragment, 0);
         block(env, morph0, context, "each", [get(env, context, "breadCrumbs")], {"keyword": "crumb"}, child0, null);
         return fragment;
       }
@@ -7141,6 +7506,7 @@ define('dummy/templates/components/f-button', ['exports'], function (exports) {
     var child0 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -7182,16 +7548,17 @@ define('dummy/templates/components/f-button', ['exports'], function (exports) {
     }());
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
       build: function build(dom) {
         var el0 = dom.createDocumentFragment();
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n\n");
         dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         return el0;
       },
@@ -7215,9 +7582,10 @@ define('dummy/templates/components/f-button', ['exports'], function (exports) {
         } else {
           fragment = this.build(dom);
         }
-        if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,2]); }
-        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
-        var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
+        var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+        var morph1 = dom.createMorphAt(fragment,2,2,contextualElement);
+        dom.insertBoundary(fragment, null);
+        dom.insertBoundary(fragment, 0);
         content(env, morph0, context, "yield");
         block(env, morph1, context, "if", [get(env, context, "isSplit")], {}, child0, null);
         return fragment;
@@ -7233,6 +7601,7 @@ define('dummy/templates/components/f-clearing-image', ['exports'], function (exp
   exports['default'] = Ember.HTMLBars.template((function() {
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -7288,12 +7657,13 @@ define('dummy/templates/components/f-clearing', ['exports'], function (exports) 
   exports['default'] = Ember.HTMLBars.template((function() {
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
       build: function build(dom) {
         var el0 = dom.createDocumentFragment();
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
@@ -7319,8 +7689,8 @@ define('dummy/templates/components/f-clearing', ['exports'], function (exports) 
         } else {
           fragment = this.build(dom);
         }
-        if (this.cachedFragment) { dom.repairClonedNode(fragment,[0]); }
-        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+        var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+        dom.insertBoundary(fragment, 0);
         content(env, morph0, context, "yield");
         return fragment;
       }
@@ -7335,12 +7705,13 @@ define('dummy/templates/components/f-dropdown', ['exports'], function (exports) 
   exports['default'] = Ember.HTMLBars.template((function() {
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
       build: function build(dom) {
         var el0 = dom.createDocumentFragment();
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
@@ -7366,8 +7737,8 @@ define('dummy/templates/components/f-dropdown', ['exports'], function (exports) 
         } else {
           fragment = this.build(dom);
         }
-        if (this.cachedFragment) { dom.repairClonedNode(fragment,[0]); }
-        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+        var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+        dom.insertBoundary(fragment, 0);
         content(env, morph0, context, "yield");
         return fragment;
       }
@@ -7382,12 +7753,13 @@ define('dummy/templates/components/f-joyride', ['exports'], function (exports) {
   exports['default'] = Ember.HTMLBars.template((function() {
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
       build: function build(dom) {
         var el0 = dom.createDocumentFragment();
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
@@ -7413,8 +7785,8 @@ define('dummy/templates/components/f-joyride', ['exports'], function (exports) {
         } else {
           fragment = this.build(dom);
         }
-        if (this.cachedFragment) { dom.repairClonedNode(fragment,[0]); }
-        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+        var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+        dom.insertBoundary(fragment, 0);
         content(env, morph0, context, "yield");
         return fragment;
       }
@@ -7429,6 +7801,7 @@ define('dummy/templates/components/f-magellan', ['exports'], function (exports) 
   exports['default'] = Ember.HTMLBars.template((function() {
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -7437,6 +7810,8 @@ define('dummy/templates/components/f-magellan', ['exports'], function (exports) 
         var el1 = dom.createElement("dl");
         dom.setAttribute(el1,"class","sub-nav");
         var el2 = dom.createTextNode("\n  ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createComment("");
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n");
         dom.appendChild(el1, el2);
@@ -7465,7 +7840,7 @@ define('dummy/templates/components/f-magellan', ['exports'], function (exports) 
         } else {
           fragment = this.build(dom);
         }
-        var morph0 = dom.createMorphAt(dom.childAt(fragment, [0]),0,1);
+        var morph0 = dom.createMorphAt(dom.childAt(fragment, [0]),1,1);
         content(env, morph0, context, "yield");
         return fragment;
       }
@@ -7481,6 +7856,7 @@ define('dummy/templates/components/f-orbit', ['exports'], function (exports) {
     var child0 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -7497,6 +7873,8 @@ define('dummy/templates/components/f-orbit', ['exports'], function (exports) {
           dom.appendChild(el1, el2);
           var el2 = dom.createElement("div");
           dom.setAttribute(el2,"class","orbit-caption");
+          var el3 = dom.createComment("");
+          dom.appendChild(el2, el3);
           dom.appendChild(el1, el2);
           var el2 = dom.createTextNode("\n  ");
           dom.appendChild(el1, el2);
@@ -7527,7 +7905,7 @@ define('dummy/templates/components/f-orbit', ['exports'], function (exports) {
           }
           var element0 = dom.childAt(fragment, [1]);
           var element1 = dom.childAt(element0, [1]);
-          var morph0 = dom.createMorphAt(dom.childAt(element0, [3]),-1,-1);
+          var morph0 = dom.createMorphAt(dom.childAt(element0, [3]),0,0);
           element(env, element1, context, "bind-attr", [], {"alt": get(env, context, "slide.imageAlt"), "src": get(env, context, "slide.imageUrl")});
           content(env, morph0, context, "slide.caption");
           return fragment;
@@ -7536,14 +7914,13 @@ define('dummy/templates/components/f-orbit', ['exports'], function (exports) {
     }());
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
       build: function build(dom) {
         var el0 = dom.createDocumentFragment();
-        var el1 = dom.createTextNode("");
-        dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         return el0;
       },
@@ -7567,8 +7944,9 @@ define('dummy/templates/components/f-orbit', ['exports'], function (exports) {
         } else {
           fragment = this.build(dom);
         }
-        if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,1]); }
-        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+        var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+        dom.insertBoundary(fragment, null);
+        dom.insertBoundary(fragment, 0);
         block(env, morph0, context, "each", [get(env, context, "slides")], {"keyword": "slide"}, child0, null);
         return fragment;
       }
@@ -7584,6 +7962,7 @@ define('dummy/templates/components/f-pagination', ['exports'], function (exports
     var child0 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -7595,6 +7974,8 @@ define('dummy/templates/components/f-pagination', ['exports'], function (exports
           var el2 = dom.createTextNode("\n    ");
           dom.appendChild(el1, el2);
           var el2 = dom.createElement("a");
+          var el3 = dom.createComment("");
+          dom.appendChild(el2, el3);
           dom.appendChild(el1, el2);
           var el2 = dom.createTextNode("\n  ");
           dom.appendChild(el1, el2);
@@ -7625,7 +8006,7 @@ define('dummy/templates/components/f-pagination', ['exports'], function (exports
           }
           var element0 = dom.childAt(fragment, [1]);
           var element1 = dom.childAt(element0, [1]);
-          var morph0 = dom.createMorphAt(element1,-1,-1);
+          var morph0 = dom.createMorphAt(element1,0,0);
           element(env, element0, context, "bind-attr", [], {"class": "page.current:current"});
           element(env, element1, context, "action", ["changePage", get(env, context, "page.number")], {});
           content(env, morph0, context, "page.number");
@@ -7635,6 +8016,7 @@ define('dummy/templates/components/f-pagination', ['exports'], function (exports
     }());
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -7651,6 +8033,8 @@ define('dummy/templates/components/f-pagination', ['exports'], function (exports
         dom.appendChild(el1, el2);
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
@@ -7690,9 +8074,9 @@ define('dummy/templates/components/f-pagination', ['exports'], function (exports
         }
         var element2 = dom.childAt(fragment, [0]);
         var element3 = dom.childAt(element2, [1]);
-        var element4 = dom.childAt(fragment, [3]);
+        var element4 = dom.childAt(fragment, [4]);
         var element5 = dom.childAt(element4, [1]);
-        var morph0 = dom.createMorphAt(fragment,1,2,contextualElement);
+        var morph0 = dom.createMorphAt(fragment,2,2,contextualElement);
         element(env, element2, context, "bind-attr", [], {"aria-disabled": get(env, context, "onFirstPage"), "class": "arrow onFirstPage:unavailable"});
         element(env, element3, context, "action", ["previousPage"], {});
         block(env, morph0, context, "each", [get(env, context, "pages")], {"keyword": "page"}, child0, null);
@@ -7711,6 +8095,7 @@ define('dummy/templates/components/f-progress-bar', ['exports'], function (expor
   exports['default'] = Ember.HTMLBars.template((function() {
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -7758,12 +8143,13 @@ define('dummy/templates/components/f-reveal-modal', ['exports'], function (expor
   exports['default'] = Ember.HTMLBars.template((function() {
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
       build: function build(dom) {
         var el0 = dom.createDocumentFragment();
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n\n");
         dom.appendChild(el0, el1);
@@ -7796,8 +8182,8 @@ define('dummy/templates/components/f-reveal-modal', ['exports'], function (expor
         } else {
           fragment = this.build(dom);
         }
-        if (this.cachedFragment) { dom.repairClonedNode(fragment,[0]); }
-        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+        var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+        dom.insertBoundary(fragment, 0);
         content(env, morph0, context, "yield");
         return fragment;
       }
@@ -7812,6 +8198,7 @@ define('dummy/templates/components/f-slider', ['exports'], function (exports) {
   exports['default'] = Ember.HTMLBars.template((function() {
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -7866,12 +8253,13 @@ define('dummy/templates/components/f-stop', ['exports'], function (exports) {
   exports['default'] = Ember.HTMLBars.template((function() {
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
       build: function build(dom) {
         var el0 = dom.createDocumentFragment();
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
@@ -7897,8 +8285,8 @@ define('dummy/templates/components/f-stop', ['exports'], function (exports) {
         } else {
           fragment = this.build(dom);
         }
-        if (this.cachedFragment) { dom.repairClonedNode(fragment,[0]); }
-        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+        var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+        dom.insertBoundary(fragment, 0);
         content(env, morph0, context, "yield");
         return fragment;
       }
@@ -7913,16 +8301,19 @@ define('dummy/templates/components/f-switch', ['exports'], function (exports) {
   exports['default'] = Ember.HTMLBars.template((function() {
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
       build: function build(dom) {
         var el0 = dom.createDocumentFragment();
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
         var el1 = dom.createElement("label");
+        var el2 = dom.createComment("");
+        dom.appendChild(el1, el2);
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n\n");
         dom.appendChild(el0, el1);
@@ -7952,10 +8343,10 @@ define('dummy/templates/components/f-switch', ['exports'], function (exports) {
         } else {
           fragment = this.build(dom);
         }
-        if (this.cachedFragment) { dom.repairClonedNode(fragment,[0]); }
         var element0 = dom.childAt(fragment, [2]);
-        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
-        var morph1 = dom.createMorphAt(element0,-1,-1);
+        var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+        var morph1 = dom.createMorphAt(element0,0,0);
+        dom.insertBoundary(fragment, 0);
         inline(env, morph0, context, "input", [], {"checked": get(env, context, "checked"), "id": get(env, context, "inputId"), "name": get(env, context, "name"), "type": get(env, context, "type")});
         element(env, element0, context, "bind-attr", [], {"for": get(env, context, "inputId")});
         content(env, morph1, context, "label");
@@ -7973,6 +8364,7 @@ define('dummy/templates/components/f-switches', ['exports'], function (exports) 
     var child0 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -7985,6 +8377,8 @@ define('dummy/templates/components/f-switches', ['exports'], function (exports) 
           var el1 = dom.createTextNode("\n  ");
           dom.appendChild(el0, el1);
           var el1 = dom.createElement("label");
+          var el2 = dom.createComment("");
+          dom.appendChild(el1, el2);
           dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n");
           dom.appendChild(el0, el1);
@@ -8012,7 +8406,7 @@ define('dummy/templates/components/f-switches', ['exports'], function (exports) 
           }
           var element0 = dom.childAt(fragment, [1]);
           var element1 = dom.childAt(fragment, [3]);
-          var morph0 = dom.createMorphAt(element1,-1,-1);
+          var morph0 = dom.createMorphAt(element1,0,0);
           element(env, element0, context, "bind-attr", [], {"disabled": get(env, context, "option.disabled"), "id": get(env, context, "option.id"), "name": get(env, context, "view.name"), "readonly": get(env, context, "option.readonly"), "type": get(env, context, "view.type"), "value": get(env, context, "option.value")});
           element(env, element1, context, "bind-attr", [], {"for": get(env, context, "option.id")});
           content(env, morph0, context, "option.label");
@@ -8022,12 +8416,13 @@ define('dummy/templates/components/f-switches', ['exports'], function (exports) 
     }());
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
       build: function build(dom) {
         var el0 = dom.createDocumentFragment();
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
@@ -8057,8 +8452,8 @@ define('dummy/templates/components/f-switches', ['exports'], function (exports) 
         } else {
           fragment = this.build(dom);
         }
-        if (this.cachedFragment) { dom.repairClonedNode(fragment,[0]); }
-        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+        var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+        dom.insertBoundary(fragment, 0);
         block(env, morph0, context, "each", [get(env, context, "options")], {"keyword": "option"}, child0, null);
         return fragment;
       }
@@ -8073,12 +8468,13 @@ define('dummy/templates/components/f-tab-pane', ['exports'], function (exports) 
   exports['default'] = Ember.HTMLBars.template((function() {
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
       build: function build(dom) {
         var el0 = dom.createDocumentFragment();
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
@@ -8104,8 +8500,8 @@ define('dummy/templates/components/f-tab-pane', ['exports'], function (exports) 
         } else {
           fragment = this.build(dom);
         }
-        if (this.cachedFragment) { dom.repairClonedNode(fragment,[0]); }
-        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+        var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+        dom.insertBoundary(fragment, 0);
         content(env, morph0, context, "yield");
         return fragment;
       }
@@ -8121,6 +8517,7 @@ define('dummy/templates/components/f-tab-panel', ['exports'], function (exports)
     var child0 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -8130,6 +8527,8 @@ define('dummy/templates/components/f-tab-panel', ['exports'], function (exports)
           dom.appendChild(el0, el1);
           var el1 = dom.createElement("dd");
           var el2 = dom.createElement("a");
+          var el3 = dom.createComment("");
+          dom.appendChild(el2, el3);
           dom.appendChild(el1, el2);
           dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n");
@@ -8157,7 +8556,7 @@ define('dummy/templates/components/f-tab-panel', ['exports'], function (exports)
             fragment = this.build(dom);
           }
           var element0 = dom.childAt(fragment, [1, 0]);
-          var morph0 = dom.createMorphAt(element0,-1,-1);
+          var morph0 = dom.createMorphAt(element0,0,0);
           element(env, element0, context, "bind-attr", [], {"href": get(env, context, "tab.href")});
           content(env, morph0, context, "tab.title");
           return fragment;
@@ -8166,6 +8565,7 @@ define('dummy/templates/components/f-tab-panel', ['exports'], function (exports)
     }());
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -8176,12 +8576,16 @@ define('dummy/templates/components/f-tab-panel', ['exports'], function (exports)
         dom.setAttribute(el1,"data-tab","");
         var el2 = dom.createTextNode("\n");
         dom.appendChild(el1, el2);
+        var el2 = dom.createComment("");
+        dom.appendChild(el1, el2);
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n\n");
         dom.appendChild(el0, el1);
         var el1 = dom.createElement("div");
         dom.setAttribute(el1,"class","tabs-content");
         var el2 = dom.createTextNode("\n  ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createComment("");
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n");
         dom.appendChild(el1, el2);
@@ -8210,8 +8614,8 @@ define('dummy/templates/components/f-tab-panel', ['exports'], function (exports)
         } else {
           fragment = this.build(dom);
         }
-        var morph0 = dom.createMorphAt(dom.childAt(fragment, [0]),0,-1);
-        var morph1 = dom.createMorphAt(dom.childAt(fragment, [2]),0,1);
+        var morph0 = dom.createMorphAt(dom.childAt(fragment, [0]),1,1);
+        var morph1 = dom.createMorphAt(dom.childAt(fragment, [2]),1,1);
         block(env, morph0, context, "each", [get(env, context, "tabs")], {"keyword": "tab"}, child0, null);
         content(env, morph1, context, "yield");
         return fragment;
@@ -8227,12 +8631,13 @@ define('dummy/templates/components/f-tooltip', ['exports'], function (exports) {
   exports['default'] = Ember.HTMLBars.template((function() {
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
       build: function build(dom) {
         var el0 = dom.createDocumentFragment();
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
@@ -8258,8 +8663,8 @@ define('dummy/templates/components/f-tooltip', ['exports'], function (exports) {
         } else {
           fragment = this.build(dom);
         }
-        if (this.cachedFragment) { dom.repairClonedNode(fragment,[0]); }
-        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+        var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+        dom.insertBoundary(fragment, 0);
         content(env, morph0, context, "yield");
         return fragment;
       }
@@ -8274,6 +8679,7 @@ define('dummy/templates/index', ['exports'], function (exports) {
   exports['default'] = Ember.HTMLBars.template((function() {
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -8341,11 +8747,14 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
     var child0 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Start Joyride");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Start Joyride");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -8375,6 +8784,7 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
       var child0 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
@@ -8422,6 +8832,7 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
       var child1 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
@@ -8469,6 +8880,7 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
       var child2 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
@@ -8515,18 +8927,21 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
       }());
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
           var el0 = dom.createDocumentFragment();
-          var el1 = dom.createTextNode("");
+          var el1 = dom.createComment("");
           dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n");
           dom.appendChild(el0, el1);
+          var el1 = dom.createComment("");
+          dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n");
           dom.appendChild(el0, el1);
-          var el1 = dom.createTextNode("");
+          var el1 = dom.createComment("");
           dom.appendChild(el0, el1);
           return el0;
         },
@@ -8550,10 +8965,11 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
           } else {
             fragment = this.build(dom);
           }
-          if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,3]); }
-          var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
-          var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
-          var morph2 = dom.createMorphAt(fragment,2,3,contextualElement);
+          var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+          var morph1 = dom.createMorphAt(fragment,2,2,contextualElement);
+          var morph2 = dom.createMorphAt(fragment,4,4,contextualElement);
+          dom.insertBoundary(fragment, null);
+          dom.insertBoundary(fragment, 0);
           block(env, morph0, context, "f-stop", [], {"at": "numero1", "nextText": "Next"}, child0, null);
           block(env, morph1, context, "f-stop", [], {"at": "numero2", "button": "Next", "nextText": "Next"}, child1, null);
           block(env, morph2, context, "f-stop", [], {"button": "End"}, child2, null);
@@ -8564,11 +8980,14 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
     var child2 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("  This is a standard alert (div.alert-box.radius).\n");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("  This is a standard alert (div.alert-box.radius).\n");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -8597,11 +9016,14 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
     var child3 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("  This is a success alert (div.alert-box.success).\n");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("  This is a success alert (div.alert-box.success).\n");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -8630,11 +9052,14 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
     var child4 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("  This is an alert (div.alert-box.alert.round).\n");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("  This is an alert (div.alert-box.alert.round).\n");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -8663,11 +9088,14 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
     var child5 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("  This is a secondary alert (div.alert-box.secondary).\n");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("  This is a secondary alert (div.alert-box.secondary).\n");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -8696,11 +9124,14 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
     var child6 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode(".tiny.button");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode(".tiny.button");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -8729,11 +9160,14 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
     var child7 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode(".small.button");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode(".small.button");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -8762,11 +9196,14 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
     var child8 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode(".button");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode(".button");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -8795,11 +9232,14 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
     var child9 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode(".expand.button");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode(".expand.button");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -8828,11 +9268,14 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
     var child10 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode(".tiny.secondary.button");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode(".tiny.secondary.button");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -8861,11 +9304,14 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
     var child11 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode(".small.success.radius.button");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode(".small.success.radius.button");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -8894,11 +9340,14 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
     var child12 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode(".alert.disabled.rounded.button");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode(".alert.disabled.rounded.button");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -8927,11 +9376,14 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
     var child13 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Button 1");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Button 1");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -8960,11 +9412,14 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
     var child14 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Button 2");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Button 2");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -8993,11 +9448,14 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
     var child15 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Button 3");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Button 3");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -9026,11 +9484,14 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
     var child16 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Button 1");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Button 1");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -9059,11 +9520,14 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
     var child17 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Button 2");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Button 2");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -9092,11 +9556,14 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
     var child18 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Button 3");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Button 3");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -9125,11 +9592,14 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
     var child19 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Button 4");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Button 4");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -9158,11 +9628,14 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
     var child20 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Button 1");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Button 1");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -9191,11 +9664,14 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
     var child21 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Button 2");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Button 2");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -9224,11 +9700,14 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
     var child22 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Button 3");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Button 3");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -9257,6 +9736,7 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
     var child23 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -9319,11 +9799,14 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
     var child24 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Tiny Dropdown Button");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Tiny Dropdown Button");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -9352,11 +9835,14 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
     var child25 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Small Secondary Radius Dropdown Button");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Small Secondary Radius Dropdown Button");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -9385,11 +9871,14 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
     var child26 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Alert Round Dropdown Button");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Alert Round Dropdown Button");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -9418,11 +9907,14 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
     var child27 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Large Success Dropdown Button");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Large Success Dropdown Button");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -9451,11 +9943,14 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
     var child28 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Large Dropdown Expand Button");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Large Dropdown Expand Button");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -9484,11 +9979,14 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
     var child29 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Tiny Split Button");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Tiny Split Button");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -9517,11 +10015,14 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
     var child30 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Small Secondary Radius Split Button");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Small Secondary Radius Split Button");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -9550,11 +10051,14 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
     var child31 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Round Alert Split Button");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Round Alert Split Button");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -9583,11 +10087,14 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
     var child32 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Large Success Split Button");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Large Success Split Button");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -9616,6 +10123,7 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
     var child33 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -9623,13 +10131,23 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
           var el0 = dom.createDocumentFragment();
           var el1 = dom.createTextNode("    ");
           dom.appendChild(el0, el1);
-          var el1 = dom.createTextNode("\n\n    ");
+          var el1 = dom.createComment("");
           dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n\n    ");
           dom.appendChild(el0, el1);
-          var el1 = dom.createTextNode("\n\n    ");
+          var el1 = dom.createComment("");
           dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n\n    ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createComment("");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n\n    ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createComment("");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n\n    ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createComment("");
           dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n");
           dom.appendChild(el0, el1);
@@ -9655,11 +10173,11 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
           } else {
             fragment = this.build(dom);
           }
-          var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
-          var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
-          var morph2 = dom.createMorphAt(fragment,2,3,contextualElement);
-          var morph3 = dom.createMorphAt(fragment,3,4,contextualElement);
-          var morph4 = dom.createMorphAt(fragment,4,5,contextualElement);
+          var morph0 = dom.createMorphAt(fragment,1,1,contextualElement);
+          var morph1 = dom.createMorphAt(fragment,3,3,contextualElement);
+          var morph2 = dom.createMorphAt(fragment,5,5,contextualElement);
+          var morph3 = dom.createMorphAt(fragment,7,7,contextualElement);
+          var morph4 = dom.createMorphAt(fragment,9,9,contextualElement);
           inline(env, morph0, context, "f-clearing-image", [], {"alt": "Comet image", "caption": "Nulla vitae elit libero, a pharetra augue. Cras mattis consectetur purus sit amet fermentum.", "thumbnail": "http://foundation.zurb.com/docs/assets/img/examples/comet-th-sm.jpg", "url": "http://foundation.zurb.com/docs/assets/img/examples/comet.jpg"});
           inline(env, morph1, context, "f-clearing-image", [], {"alt": "Earth image", "thumbnail": "http://foundation.zurb.com/docs/assets/img/examples/earth-th-sm.jpg", "url": "http://foundation.zurb.com/docs/assets/img/examples/earth.jpg"});
           inline(env, morph2, context, "f-clearing-image", [], {"alt": "Launch image", "caption": "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.", "thumbnail": "http://foundation.zurb.com/docs/assets/img/examples/launch-th-sm.jpg", "url": "http://foundation.zurb.com/docs/assets/img/examples/launch.jpg"});
@@ -9672,11 +10190,14 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
     var child34 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Link Dropdown »");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Link Dropdown »");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -9705,11 +10226,14 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
     var child35 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Content Dropdown »");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Content Dropdown »");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -9738,6 +10262,7 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
     var child36 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -9801,11 +10326,14 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
       var child0 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
-            var el0 = dom.createTextNode("Button");
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("Button");
+            dom.appendChild(el0, el1);
             return el0;
           },
           render: function render(context, env, contextualElement) {
@@ -9833,6 +10361,7 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
       }());
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -9864,6 +10393,8 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
           dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n  ");
           dom.appendChild(el0, el1);
+          var el1 = dom.createComment("");
+          dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n");
           dom.appendChild(el0, el1);
           return el0;
@@ -9888,7 +10419,7 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
           } else {
             fragment = this.build(dom);
           }
-          var morph0 = dom.createMorphAt(fragment,8,9,contextualElement);
+          var morph0 = dom.createMorphAt(fragment,9,9,contextualElement);
           block(env, morph0, context, "f-button", [], {}, child0, null);
           return fragment;
         }
@@ -9898,11 +10429,14 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
       var child0 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
-            var el0 = dom.createTextNode("Build with HTML");
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("Build with HTML");
+            dom.appendChild(el0, el1);
             return el0;
           },
           render: function render(context, env, contextualElement) {
@@ -9931,11 +10465,14 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
       var child1 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
-            var el0 = dom.createTextNode("Using JavaScript");
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("Using JavaScript");
+            dom.appendChild(el0, el1);
             return el0;
           },
           render: function render(context, env, contextualElement) {
@@ -9963,6 +10500,7 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
       }());
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -9970,7 +10508,11 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
           var el0 = dom.createDocumentFragment();
           var el1 = dom.createTextNode("  ");
           dom.appendChild(el0, el1);
+          var el1 = dom.createComment("");
+          dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n  ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createComment("");
           dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n");
           dom.appendChild(el0, el1);
@@ -9996,8 +10538,8 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
           } else {
             fragment = this.build(dom);
           }
-          var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
-          var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
+          var morph0 = dom.createMorphAt(fragment,1,1,contextualElement);
+          var morph1 = dom.createMorphAt(fragment,3,3,contextualElement);
           block(env, morph0, context, "f-arrival", [], {"href": "#build", "name": "build"}, child0, null);
           block(env, morph1, context, "f-arrival", [], {"href": "#js", "name": "js"}, child1, null);
           return fragment;
@@ -10007,11 +10549,14 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
     var child39 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Buy Now");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Buy Now");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -10040,11 +10585,14 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
     var child40 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Example Modal…");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Example Modal…");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -10073,11 +10621,14 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
     var child41 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("Example Video Modal…");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Example Video Modal…");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -10107,11 +10658,14 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
       var child0 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
-            var el0 = dom.createTextNode("Second Modal…");
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("Second Modal…");
+            dom.appendChild(el0, el1);
             return el0;
           },
           render: function render(context, env, contextualElement) {
@@ -10139,6 +10693,7 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
       }());
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -10171,6 +10726,8 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
           var el1 = dom.createTextNode("\n\n  ");
           dom.appendChild(el0, el1);
           var el1 = dom.createElement("p");
+          var el2 = dom.createComment("");
+          dom.appendChild(el1, el2);
           dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n");
           dom.appendChild(el0, el1);
@@ -10196,7 +10753,7 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
           } else {
             fragment = this.build(dom);
           }
-          var morph0 = dom.createMorphAt(dom.childAt(fragment, [7]),-1,-1);
+          var morph0 = dom.createMorphAt(dom.childAt(fragment, [7]),0,0);
           block(env, morph0, context, "f-button", [], {"class": "secondary", "revealId": "secondModal"}, child0, null);
           return fragment;
         }
@@ -10205,6 +10762,7 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
     var child43 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -10252,6 +10810,7 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
     var child44 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -10312,6 +10871,7 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
           var child0 = (function() {
             return {
               isHTMLBars: true,
+              revision: "Ember@1.11.0",
               blockParams: 0,
               cachedFragment: null,
               hasRendered: false,
@@ -10353,6 +10913,7 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
           var child1 = (function() {
             return {
               isHTMLBars: true,
+              revision: "Ember@1.11.0",
               blockParams: 0,
               cachedFragment: null,
               hasRendered: false,
@@ -10394,6 +10955,7 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
           var child2 = (function() {
             return {
               isHTMLBars: true,
+              revision: "Ember@1.11.0",
               blockParams: 0,
               cachedFragment: null,
               hasRendered: false,
@@ -10435,6 +10997,7 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
           var child3 = (function() {
             return {
               isHTMLBars: true,
+              revision: "Ember@1.11.0",
               blockParams: 0,
               cachedFragment: null,
               hasRendered: false,
@@ -10475,20 +11038,25 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
           }());
           return {
             isHTMLBars: true,
+            revision: "Ember@1.11.0",
             blockParams: 0,
             cachedFragment: null,
             hasRendered: false,
             build: function build(dom) {
               var el0 = dom.createDocumentFragment();
-              var el1 = dom.createTextNode("");
+              var el1 = dom.createComment("");
               dom.appendChild(el0, el1);
               var el1 = dom.createTextNode("\n");
               dom.appendChild(el0, el1);
-              var el1 = dom.createTextNode("\n");
+              var el1 = dom.createComment("");
               dom.appendChild(el0, el1);
               var el1 = dom.createTextNode("\n");
               dom.appendChild(el0, el1);
-              var el1 = dom.createTextNode("");
+              var el1 = dom.createComment("");
+              dom.appendChild(el0, el1);
+              var el1 = dom.createTextNode("\n");
+              dom.appendChild(el0, el1);
+              var el1 = dom.createComment("");
               dom.appendChild(el0, el1);
               return el0;
             },
@@ -10512,11 +11080,12 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
               } else {
                 fragment = this.build(dom);
               }
-              if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,4]); }
-              var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
-              var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
-              var morph2 = dom.createMorphAt(fragment,2,3,contextualElement);
-              var morph3 = dom.createMorphAt(fragment,3,4,contextualElement);
+              var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+              var morph1 = dom.createMorphAt(fragment,2,2,contextualElement);
+              var morph2 = dom.createMorphAt(fragment,4,4,contextualElement);
+              var morph3 = dom.createMorphAt(fragment,6,6,contextualElement);
+              dom.insertBoundary(fragment, null);
+              dom.insertBoundary(fragment, 0);
               block(env, morph0, context, "f-tab-pane", [], {"id": "panel1-1", "title": "Tab 1"}, child0, null);
               block(env, morph1, context, "f-tab-pane", [], {"id": "panel1-2", "title": "Tab 2"}, child1, null);
               block(env, morph2, context, "f-tab-pane", [], {"id": "panel1-3", "title": "Tab 3"}, child2, null);
@@ -10527,14 +11096,13 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
         }());
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
             var el0 = dom.createDocumentFragment();
-            var el1 = dom.createTextNode("");
-            dom.appendChild(el0, el1);
-            var el1 = dom.createTextNode("");
+            var el1 = dom.createComment("");
             dom.appendChild(el0, el1);
             return el0;
           },
@@ -10558,8 +11126,9 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
             } else {
               fragment = this.build(dom);
             }
-            if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,1]); }
-            var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+            var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+            dom.insertBoundary(fragment, null);
+            dom.insertBoundary(fragment, 0);
             block(env, morph0, context, "f-tab-panel", [], {}, child0, null);
             return fragment;
           }
@@ -10568,11 +11137,14 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
       var child1 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
-            var el0 = dom.createTextNode("    Panel 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do\n    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim\n    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea\n    commodo consequat.\n");
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("    Panel 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do\n    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim\n    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea\n    commodo consequat.\n");
+            dom.appendChild(el0, el1);
             return el0;
           },
           render: function render(context, env, contextualElement) {
@@ -10601,11 +11173,14 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
       var child2 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
-            var el0 = dom.createTextNode("    Panel 3. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do\n    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim\n    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea\n    commodo consequat.\n");
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("    Panel 3. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do\n    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim\n    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea\n    commodo consequat.\n");
+            dom.appendChild(el0, el1);
             return el0;
           },
           render: function render(context, env, contextualElement) {
@@ -10633,18 +11208,21 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
       }());
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
           var el0 = dom.createDocumentFragment();
-          var el1 = dom.createTextNode("");
+          var el1 = dom.createComment("");
           dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n");
           dom.appendChild(el0, el1);
+          var el1 = dom.createComment("");
+          dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n");
           dom.appendChild(el0, el1);
-          var el1 = dom.createTextNode("");
+          var el1 = dom.createComment("");
           dom.appendChild(el0, el1);
           return el0;
         },
@@ -10668,10 +11246,11 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
           } else {
             fragment = this.build(dom);
           }
-          if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,3]); }
-          var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
-          var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
-          var morph2 = dom.createMorphAt(fragment,2,3,contextualElement);
+          var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+          var morph1 = dom.createMorphAt(fragment,2,2,contextualElement);
+          var morph2 = dom.createMorphAt(fragment,4,4,contextualElement);
+          dom.insertBoundary(fragment, null);
+          dom.insertBoundary(fragment, 0);
           block(env, morph0, context, "f-accordion-panel", [], {"id": "panel1", "title": "Accordion 1"}, child0, null);
           block(env, morph1, context, "f-accordion-panel", [], {"id": "panel2", "title": "Accordion 2"}, child1, null);
           block(env, morph2, context, "f-accordion-panel", [], {"id": "panel3", "title": "Accordion 3"}, child2, null);
@@ -10683,6 +11262,7 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
       var child0 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
@@ -10724,6 +11304,7 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
       var child1 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
@@ -10765,6 +11346,7 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
       var child2 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
@@ -10806,6 +11388,7 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
       var child3 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
@@ -10846,20 +11429,25 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
       }());
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
           var el0 = dom.createDocumentFragment();
-          var el1 = dom.createTextNode("");
+          var el1 = dom.createComment("");
           dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n");
           dom.appendChild(el0, el1);
-          var el1 = dom.createTextNode("\n");
+          var el1 = dom.createComment("");
           dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n");
           dom.appendChild(el0, el1);
-          var el1 = dom.createTextNode("");
+          var el1 = dom.createComment("");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createComment("");
           dom.appendChild(el0, el1);
           return el0;
         },
@@ -10883,11 +11471,12 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
           } else {
             fragment = this.build(dom);
           }
-          if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,4]); }
-          var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
-          var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
-          var morph2 = dom.createMorphAt(fragment,2,3,contextualElement);
-          var morph3 = dom.createMorphAt(fragment,3,4,contextualElement);
+          var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+          var morph1 = dom.createMorphAt(fragment,2,2,contextualElement);
+          var morph2 = dom.createMorphAt(fragment,4,4,contextualElement);
+          var morph3 = dom.createMorphAt(fragment,6,6,contextualElement);
+          dom.insertBoundary(fragment, null);
+          dom.insertBoundary(fragment, 0);
           block(env, morph0, context, "f-tab-pane", [], {"id": "panel2-1", "title": "Tab 1"}, child0, null);
           block(env, morph1, context, "f-tab-pane", [], {"id": "panel2-2", "title": "Tab 2"}, child1, null);
           block(env, morph2, context, "f-tab-pane", [], {"id": "panel2-3", "title": "Tab 3"}, child2, null);
@@ -10899,11 +11488,14 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
     var child47 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("    \"tip-bottom\"\n  ");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("    \"tip-bottom\"\n  ");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -10932,11 +11524,14 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
     var child48 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("    \"tip-top\" (hehe)\n  ");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("    \"tip-top\" (hehe)\n  ");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -10965,11 +11560,14 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
     var child49 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("    \"tip-left\"\n  ");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("    \"tip-left\"\n  ");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -10998,11 +11596,14 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
     var child50 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
-          var el0 = dom.createTextNode("    \"tip-right\"\n  ");
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("    \"tip-right\"\n  ");
+          dom.appendChild(el0, el1);
           return el0;
         },
         render: function render(context, env, contextualElement) {
@@ -11030,6 +11631,7 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
     }());
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -11059,6 +11661,8 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
         var el1 = dom.createElement("div");
         var el2 = dom.createTextNode("\n  ");
         dom.appendChild(el1, el2);
+        var el2 = dom.createComment("");
+        dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n\n  ");
         dom.appendChild(el1, el2);
         var el2 = dom.createElement("h5");
@@ -11077,6 +11681,8 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n\n");
         dom.appendChild(el1, el2);
+        var el2 = dom.createComment("");
+        dom.appendChild(el1, el2);
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n\n");
         dom.appendChild(el0, el1);
@@ -11091,11 +11697,13 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
@@ -11160,6 +11768,8 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
+        var el1 = dom.createComment("");
+        dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n\n");
         dom.appendChild(el0, el1);
         var el1 = dom.createElement("hr");
@@ -11181,11 +11791,7 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
         dom.setAttribute(el2,"class","small-6 large-6 columns");
         var el3 = dom.createTextNode("\n    ");
         dom.appendChild(el2, el3);
-        var el3 = dom.createTextNode("\n    ");
-        dom.appendChild(el2, el3);
-        var el3 = dom.createElement("br");
-        dom.appendChild(el2, el3);
-        var el3 = dom.createTextNode("\n    ");
+        var el3 = dom.createComment("");
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n    ");
         dom.appendChild(el2, el3);
@@ -11193,11 +11799,23 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n    ");
         dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n    ");
         dom.appendChild(el2, el3);
         var el3 = dom.createElement("br");
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n    ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createTextNode("\n    ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createElement("br");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createTextNode("\n    ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n  ");
         dom.appendChild(el2, el3);
@@ -11208,17 +11826,23 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
         dom.setAttribute(el2,"class","small-6 large-6 columns");
         var el3 = dom.createTextNode("\n    ");
         dom.appendChild(el2, el3);
-        var el3 = dom.createTextNode("\n    ");
-        dom.appendChild(el2, el3);
-        var el3 = dom.createElement("br");
-        dom.appendChild(el2, el3);
-        var el3 = dom.createTextNode("\n    ");
+        var el3 = dom.createComment("");
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n    ");
         dom.appendChild(el2, el3);
         var el3 = dom.createElement("br");
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n    ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createTextNode("\n    ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createElement("br");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createTextNode("\n    ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n  ");
         dom.appendChild(el2, el3);
@@ -11244,14 +11868,20 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
         var el2 = dom.createTextNode("\n  ");
         dom.appendChild(el1, el2);
         var el2 = dom.createElement("li");
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n  ");
         dom.appendChild(el1, el2);
         var el2 = dom.createElement("li");
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n  ");
         dom.appendChild(el1, el2);
         var el2 = dom.createElement("li");
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n");
         dom.appendChild(el1, el2);
@@ -11263,18 +11893,26 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
         var el2 = dom.createTextNode("\n  ");
         dom.appendChild(el1, el2);
         var el2 = dom.createElement("li");
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n  ");
         dom.appendChild(el1, el2);
         var el2 = dom.createElement("li");
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n  ");
         dom.appendChild(el1, el2);
         var el2 = dom.createElement("li");
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n  ");
         dom.appendChild(el1, el2);
         var el2 = dom.createElement("li");
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n");
         dom.appendChild(el1, el2);
@@ -11286,14 +11924,20 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
         var el2 = dom.createTextNode("\n  ");
         dom.appendChild(el1, el2);
         var el2 = dom.createElement("li");
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n  ");
         dom.appendChild(el1, el2);
         var el2 = dom.createElement("li");
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n  ");
         dom.appendChild(el1, el2);
         var el2 = dom.createElement("li");
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n");
         dom.appendChild(el1, el2);
@@ -11305,14 +11949,20 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
         var el2 = dom.createTextNode("\n  ");
         dom.appendChild(el1, el2);
         var el2 = dom.createElement("li");
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n  ");
         dom.appendChild(el1, el2);
         var el2 = dom.createElement("li");
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n  ");
         dom.appendChild(el1, el2);
         var el2 = dom.createElement("li");
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n");
         dom.appendChild(el1, el2);
@@ -11330,14 +11980,12 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
+        var el1 = dom.createComment("");
+        dom.appendChild(el0, el1);
         var el1 = dom.createElement("p");
         var el2 = dom.createTextNode("\n  ");
         dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n  ");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createElement("br");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n  ");
+        var el2 = dom.createComment("");
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n  ");
         dom.appendChild(el1, el2);
@@ -11345,17 +11993,31 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n  ");
         dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n  ");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createElement("br");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n  ");
+        var el2 = dom.createComment("");
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n  ");
         dom.appendChild(el1, el2);
         var el2 = dom.createElement("br");
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n  ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createComment("");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode("\n  ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createElement("br");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode("\n  ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createComment("");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode("\n  ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createElement("br");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode("\n  ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createComment("");
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n");
         dom.appendChild(el1, el2);
@@ -11376,11 +12038,7 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
         var el1 = dom.createElement("p");
         var el2 = dom.createTextNode("\n  ");
         dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n  ");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createElement("br");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n  ");
+        var el2 = dom.createComment("");
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n  ");
         dom.appendChild(el1, el2);
@@ -11388,11 +12046,23 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n  ");
         dom.appendChild(el1, el2);
+        var el2 = dom.createComment("");
+        dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n  ");
         dom.appendChild(el1, el2);
         var el2 = dom.createElement("br");
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n  ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createComment("");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode("\n  ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createElement("br");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode("\n  ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createComment("");
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n");
         dom.appendChild(el1, el2);
@@ -11410,11 +12080,19 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("\n");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
+        var el1 = dom.createComment("");
+        dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createComment("");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n\n");
         dom.appendChild(el0, el1);
@@ -11428,6 +12106,8 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
         dom.appendChild(el1, el2);
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
@@ -11468,6 +12148,8 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
         dom.appendChild(el4, el5);
         var el5 = dom.createTextNode("\n        ");
         dom.appendChild(el4, el5);
+        var el5 = dom.createComment("");
+        dom.appendChild(el4, el5);
         var el5 = dom.createTextNode("\n      ");
         dom.appendChild(el4, el5);
         dom.appendChild(el3, el4);
@@ -11490,6 +12172,8 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
         dom.appendChild(el4, el5);
         var el5 = dom.createTextNode("\n        ");
         dom.appendChild(el4, el5);
+        var el5 = dom.createComment("");
+        dom.appendChild(el4, el5);
         var el5 = dom.createTextNode("\n      ");
         dom.appendChild(el4, el5);
         dom.appendChild(el3, el4);
@@ -11504,6 +12188,8 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
         dom.appendChild(el5, el6);
         dom.appendChild(el4, el5);
         var el5 = dom.createTextNode("\n        ");
+        dom.appendChild(el4, el5);
+        var el5 = dom.createComment("");
         dom.appendChild(el4, el5);
         var el5 = dom.createTextNode("\n      ");
         dom.appendChild(el4, el5);
@@ -11527,6 +12213,8 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
         var el6 = dom.createElement("div");
         dom.setAttribute(el6,"class","small-9 columns");
         var el7 = dom.createTextNode("\n            ");
+        dom.appendChild(el6, el7);
+        var el7 = dom.createComment("");
         dom.appendChild(el6, el7);
         var el7 = dom.createTextNode("\n          ");
         dom.appendChild(el6, el7);
@@ -11570,6 +12258,8 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
         dom.appendChild(el4, el5);
         var el5 = dom.createTextNode("\n        ");
         dom.appendChild(el4, el5);
+        var el5 = dom.createComment("");
+        dom.appendChild(el4, el5);
         var el5 = dom.createTextNode("\n      ");
         dom.appendChild(el4, el5);
         dom.appendChild(el3, el4);
@@ -11598,7 +12288,11 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
         var el1 = dom.createElement("p");
         var el2 = dom.createTextNode("\n  ");
         dom.appendChild(el1, el2);
+        var el2 = dom.createComment("");
+        dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n  ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createComment("");
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n");
         dom.appendChild(el1, el2);
@@ -11609,7 +12303,9 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
@@ -11794,6 +12490,8 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
+        var el1 = dom.createComment("");
+        dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
         var el1 = dom.createElement("p");
@@ -11874,6 +12572,8 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
         dom.appendChild(el1, el2);
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n\n");
         dom.appendChild(el0, el1);
@@ -12014,6 +12714,8 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
         dom.appendChild(el3, el4);
         var el4 = dom.createElement("li");
         dom.setAttribute(el4,"class","cta-button");
+        var el5 = dom.createComment("");
+        dom.appendChild(el4, el5);
         dom.appendChild(el3, el4);
         var el4 = dom.createTextNode("\n    ");
         dom.appendChild(el3, el4);
@@ -12037,11 +12739,19 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("\n");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
+        var el1 = dom.createComment("");
+        dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createComment("");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n\n");
         dom.appendChild(el0, el1);
@@ -12059,16 +12769,26 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
         var el1 = dom.createElement("p");
         var el2 = dom.createTextNode("\n  ");
         dom.appendChild(el1, el2);
+        var el2 = dom.createComment("");
+        dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n  ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createComment("");
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n");
         dom.appendChild(el1, el2);
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n\n");
         dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("\n");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createComment("");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
@@ -12083,11 +12803,19 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("\n");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
+        var el1 = dom.createComment("");
+        dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createComment("");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n\n");
         dom.appendChild(el0, el1);
@@ -12102,6 +12830,8 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
+        var el1 = dom.createComment("");
+        dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
         var el1 = dom.createElement("hr");
@@ -12114,6 +12844,8 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
         dom.appendChild(el1, el2);
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
@@ -12441,11 +13173,19 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
         var el1 = dom.createElement("p");
         var el2 = dom.createTextNode("\n  The tooltips can be positioned on the\n");
         dom.appendChild(el1, el2);
+        var el2 = dom.createComment("");
+        dom.appendChild(el1, el2);
         var el2 = dom.createTextNode(", which is the default position,\n");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createComment("");
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode(",\n");
         dom.appendChild(el1, el2);
+        var el2 = dom.createComment("");
+        dom.appendChild(el1, el2);
         var el2 = dom.createTextNode(", or\n");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createComment("");
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode(" of the target element by adding the appropriate class to them.\n  You can even add your own custom class to style each tip differently. On a\n  small device, the tooltips are full width and bottom aligned.\n");
         dom.appendChild(el1, el2);
@@ -13393,95 +14133,94 @@ define('dummy/templates/kitchen-sink', ['exports'], function (exports) {
         } else {
           fragment = this.build(dom);
         }
-        if (this.cachedFragment) { dom.repairClonedNode(fragment,[12,13,14,83]); }
         var element0 = dom.childAt(fragment, [6]);
-        var element1 = dom.childAt(fragment, [31]);
+        var element1 = dom.childAt(fragment, [33]);
         var element2 = dom.childAt(element1, [1]);
         var element3 = dom.childAt(element1, [3]);
-        var element4 = dom.childAt(fragment, [37]);
-        var element5 = dom.childAt(fragment, [39]);
-        var element6 = dom.childAt(fragment, [41]);
-        var element7 = dom.childAt(fragment, [43]);
-        var element8 = dom.childAt(fragment, [49]);
-        var element9 = dom.childAt(fragment, [55]);
-        var element10 = dom.childAt(fragment, [74, 1]);
+        var element4 = dom.childAt(fragment, [39]);
+        var element5 = dom.childAt(fragment, [41]);
+        var element6 = dom.childAt(fragment, [43]);
+        var element7 = dom.childAt(fragment, [45]);
+        var element8 = dom.childAt(fragment, [52]);
+        var element9 = dom.childAt(fragment, [58]);
+        var element10 = dom.childAt(fragment, [82, 1]);
         var element11 = dom.childAt(element10, [5]);
-        var element12 = dom.childAt(fragment, [80]);
-        var element13 = dom.childAt(fragment, [162]);
-        var element14 = dom.childAt(fragment, [213]);
-        var morph0 = dom.createMorphAt(element0,0,1);
-        var morph1 = dom.createMorphAt(element0,5,-1);
-        var morph2 = dom.createMorphAt(fragment,11,12,contextualElement);
-        var morph3 = dom.createMorphAt(fragment,12,13,contextualElement);
-        var morph4 = dom.createMorphAt(fragment,13,14,contextualElement);
-        var morph5 = dom.createMorphAt(fragment,14,15,contextualElement);
-        var morph6 = dom.createMorphAt(fragment,25,26,contextualElement);
-        var morph7 = dom.createMorphAt(element2,0,1);
-        var morph8 = dom.createMorphAt(element2,3,4);
-        var morph9 = dom.createMorphAt(element2,6,7);
-        var morph10 = dom.createMorphAt(element2,9,10);
-        var morph11 = dom.createMorphAt(element3,0,1);
-        var morph12 = dom.createMorphAt(element3,3,4);
-        var morph13 = dom.createMorphAt(element3,6,7);
-        var morph14 = dom.createMorphAt(dom.childAt(element4, [1]),-1,-1);
-        var morph15 = dom.createMorphAt(dom.childAt(element4, [3]),-1,-1);
-        var morph16 = dom.createMorphAt(dom.childAt(element4, [5]),-1,-1);
-        var morph17 = dom.createMorphAt(dom.childAt(element5, [1]),-1,-1);
-        var morph18 = dom.createMorphAt(dom.childAt(element5, [3]),-1,-1);
-        var morph19 = dom.createMorphAt(dom.childAt(element5, [5]),-1,-1);
-        var morph20 = dom.createMorphAt(dom.childAt(element5, [7]),-1,-1);
-        var morph21 = dom.createMorphAt(dom.childAt(element6, [1]),-1,-1);
-        var morph22 = dom.createMorphAt(dom.childAt(element6, [3]),-1,-1);
-        var morph23 = dom.createMorphAt(dom.childAt(element6, [5]),-1,-1);
-        var morph24 = dom.createMorphAt(dom.childAt(element7, [1]),-1,-1);
-        var morph25 = dom.createMorphAt(dom.childAt(element7, [3]),-1,-1);
-        var morph26 = dom.createMorphAt(dom.childAt(element7, [5]),-1,-1);
-        var morph27 = dom.createMorphAt(fragment,48,49,contextualElement);
-        var morph28 = dom.createMorphAt(element8,0,1);
-        var morph29 = dom.createMorphAt(element8,3,4);
-        var morph30 = dom.createMorphAt(element8,6,7);
-        var morph31 = dom.createMorphAt(element8,9,10);
-        var morph32 = dom.createMorphAt(element8,12,13);
-        var morph33 = dom.createMorphAt(element9,0,1);
-        var morph34 = dom.createMorphAt(element9,3,4);
-        var morph35 = dom.createMorphAt(element9,6,7);
-        var morph36 = dom.createMorphAt(element9,9,10);
-        var morph37 = dom.createMorphAt(fragment,60,61,contextualElement);
-        var morph38 = dom.createMorphAt(fragment,61,62,contextualElement);
-        var morph39 = dom.createMorphAt(fragment,62,63,contextualElement);
-        var morph40 = dom.createMorphAt(fragment,63,64,contextualElement);
-        var morph41 = dom.createMorphAt(fragment,68,69,contextualElement);
-        var morph42 = dom.createMorphAt(dom.childAt(element10, [3, 1]),2,3);
-        var morph43 = dom.createMorphAt(dom.childAt(element11, [1]),2,3);
-        var morph44 = dom.createMorphAt(dom.childAt(element11, [3]),2,3);
-        var morph45 = dom.createMorphAt(dom.childAt(element11, [5, 1, 3]),0,1);
-        var morph46 = dom.createMorphAt(dom.childAt(element10, [7, 1]),2,3);
-        var morph47 = dom.createMorphAt(element12,0,1);
-        var morph48 = dom.createMorphAt(element12,1,2);
-        var morph49 = dom.createMorphAt(fragment,83,84,contextualElement);
-        var morph50 = dom.createMorphAt(fragment,84,85,contextualElement);
-        var morph51 = dom.createMorphAt(fragment,113,114,contextualElement);
-        var morph52 = dom.createMorphAt(fragment,136,137,contextualElement);
-        var morph53 = dom.createMorphAt(dom.childAt(fragment, [148, 1, 1, 13]),-1,-1);
-        var morph54 = dom.createMorphAt(fragment,153,154,contextualElement);
-        var morph55 = dom.createMorphAt(fragment,154,155,contextualElement);
-        var morph56 = dom.createMorphAt(fragment,155,156,contextualElement);
-        var morph57 = dom.createMorphAt(fragment,156,157,contextualElement);
-        var morph58 = dom.createMorphAt(element13,0,1);
-        var morph59 = dom.createMorphAt(element13,1,2);
-        var morph60 = dom.createMorphAt(fragment,163,164,contextualElement);
-        var morph61 = dom.createMorphAt(fragment,164,165,contextualElement);
-        var morph62 = dom.createMorphAt(fragment,165,166,contextualElement);
-        var morph63 = dom.createMorphAt(fragment,170,171,contextualElement);
-        var morph64 = dom.createMorphAt(fragment,171,172,contextualElement);
-        var morph65 = dom.createMorphAt(fragment,172,173,contextualElement);
-        var morph66 = dom.createMorphAt(fragment,173,174,contextualElement);
-        var morph67 = dom.createMorphAt(fragment,178,179,contextualElement);
-        var morph68 = dom.createMorphAt(fragment,183,184,contextualElement);
-        var morph69 = dom.createMorphAt(element14,0,1);
-        var morph70 = dom.createMorphAt(element14,1,2);
-        var morph71 = dom.createMorphAt(element14,2,3);
-        var morph72 = dom.createMorphAt(element14,3,4);
+        var element12 = dom.childAt(fragment, [88]);
+        var element13 = dom.childAt(fragment, [177]);
+        var element14 = dom.childAt(fragment, [237]);
+        var morph0 = dom.createMorphAt(element0,1,1);
+        var morph1 = dom.createMorphAt(element0,7,7);
+        var morph2 = dom.createMorphAt(fragment,12,12,contextualElement);
+        var morph3 = dom.createMorphAt(fragment,13,13,contextualElement);
+        var morph4 = dom.createMorphAt(fragment,14,14,contextualElement);
+        var morph5 = dom.createMorphAt(fragment,15,15,contextualElement);
+        var morph6 = dom.createMorphAt(fragment,27,27,contextualElement);
+        var morph7 = dom.createMorphAt(element2,1,1);
+        var morph8 = dom.createMorphAt(element2,5,5);
+        var morph9 = dom.createMorphAt(element2,9,9);
+        var morph10 = dom.createMorphAt(element2,13,13);
+        var morph11 = dom.createMorphAt(element3,1,1);
+        var morph12 = dom.createMorphAt(element3,5,5);
+        var morph13 = dom.createMorphAt(element3,9,9);
+        var morph14 = dom.createMorphAt(dom.childAt(element4, [1]),0,0);
+        var morph15 = dom.createMorphAt(dom.childAt(element4, [3]),0,0);
+        var morph16 = dom.createMorphAt(dom.childAt(element4, [5]),0,0);
+        var morph17 = dom.createMorphAt(dom.childAt(element5, [1]),0,0);
+        var morph18 = dom.createMorphAt(dom.childAt(element5, [3]),0,0);
+        var morph19 = dom.createMorphAt(dom.childAt(element5, [5]),0,0);
+        var morph20 = dom.createMorphAt(dom.childAt(element5, [7]),0,0);
+        var morph21 = dom.createMorphAt(dom.childAt(element6, [1]),0,0);
+        var morph22 = dom.createMorphAt(dom.childAt(element6, [3]),0,0);
+        var morph23 = dom.createMorphAt(dom.childAt(element6, [5]),0,0);
+        var morph24 = dom.createMorphAt(dom.childAt(element7, [1]),0,0);
+        var morph25 = dom.createMorphAt(dom.childAt(element7, [3]),0,0);
+        var morph26 = dom.createMorphAt(dom.childAt(element7, [5]),0,0);
+        var morph27 = dom.createMorphAt(fragment,51,51,contextualElement);
+        var morph28 = dom.createMorphAt(element8,1,1);
+        var morph29 = dom.createMorphAt(element8,5,5);
+        var morph30 = dom.createMorphAt(element8,9,9);
+        var morph31 = dom.createMorphAt(element8,13,13);
+        var morph32 = dom.createMorphAt(element8,17,17);
+        var morph33 = dom.createMorphAt(element9,1,1);
+        var morph34 = dom.createMorphAt(element9,5,5);
+        var morph35 = dom.createMorphAt(element9,9,9);
+        var morph36 = dom.createMorphAt(element9,13,13);
+        var morph37 = dom.createMorphAt(fragment,64,64,contextualElement);
+        var morph38 = dom.createMorphAt(fragment,66,66,contextualElement);
+        var morph39 = dom.createMorphAt(fragment,68,68,contextualElement);
+        var morph40 = dom.createMorphAt(fragment,70,70,contextualElement);
+        var morph41 = dom.createMorphAt(fragment,76,76,contextualElement);
+        var morph42 = dom.createMorphAt(dom.childAt(element10, [3, 1]),3,3);
+        var morph43 = dom.createMorphAt(dom.childAt(element11, [1]),3,3);
+        var morph44 = dom.createMorphAt(dom.childAt(element11, [3]),3,3);
+        var morph45 = dom.createMorphAt(dom.childAt(element11, [5, 1, 3]),1,1);
+        var morph46 = dom.createMorphAt(dom.childAt(element10, [7, 1]),3,3);
+        var morph47 = dom.createMorphAt(element12,1,1);
+        var morph48 = dom.createMorphAt(element12,3,3);
+        var morph49 = dom.createMorphAt(fragment,92,92,contextualElement);
+        var morph50 = dom.createMorphAt(fragment,93,93,contextualElement);
+        var morph51 = dom.createMorphAt(fragment,123,123,contextualElement);
+        var morph52 = dom.createMorphAt(fragment,147,147,contextualElement);
+        var morph53 = dom.createMorphAt(dom.childAt(fragment, [159, 1, 1, 13]),0,0);
+        var morph54 = dom.createMorphAt(fragment,165,165,contextualElement);
+        var morph55 = dom.createMorphAt(fragment,167,167,contextualElement);
+        var morph56 = dom.createMorphAt(fragment,169,169,contextualElement);
+        var morph57 = dom.createMorphAt(fragment,171,171,contextualElement);
+        var morph58 = dom.createMorphAt(element13,1,1);
+        var morph59 = dom.createMorphAt(element13,3,3);
+        var morph60 = dom.createMorphAt(fragment,179,179,contextualElement);
+        var morph61 = dom.createMorphAt(fragment,181,181,contextualElement);
+        var morph62 = dom.createMorphAt(fragment,183,183,contextualElement);
+        var morph63 = dom.createMorphAt(fragment,189,189,contextualElement);
+        var morph64 = dom.createMorphAt(fragment,191,191,contextualElement);
+        var morph65 = dom.createMorphAt(fragment,193,193,contextualElement);
+        var morph66 = dom.createMorphAt(fragment,195,195,contextualElement);
+        var morph67 = dom.createMorphAt(fragment,201,201,contextualElement);
+        var morph68 = dom.createMorphAt(fragment,207,207,contextualElement);
+        var morph69 = dom.createMorphAt(element14,1,1);
+        var morph70 = dom.createMorphAt(element14,3,3);
+        var morph71 = dom.createMorphAt(element14,5,5);
+        var morph72 = dom.createMorphAt(element14,7,7);
         block(env, morph0, context, "f-button", [], {"class": "secondary"}, child0, null);
         block(env, morph1, context, "f-joyride", [], {}, child1, null);
         block(env, morph2, context, "f-alert", [], {"class": "radius"}, child2, null);
@@ -13589,7 +14328,7 @@ catch(err) {
 if (runningTests) {
   require("dummy/tests/test-helper");
 } else {
-  require("dummy/app")["default"].create({"name":"ember-foundation","version":"0.4.1"});
+  require("dummy/app")["default"].create({"name":"ember-foundation","version":"0.5.0.b5ea00e4"});
 }
 
 /* jshint ignore:end */
