@@ -2,22 +2,22 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   actions: {
-    changePage: function(page) {
+    changePage(page) {
       console.log('Changing pagination page to', page);
     },
 
-    greet: function() {
+    greet() {
       console.log('Hello!');
     },
 
-    logValue: function(value) {
+    logValue(value) {
       console.log(value);
     }
   },
 
   breadCrumbName: 'Kitchen Sink',
 
-  switchAOptions: [
+  switchAOptions: Ember.A([
     {
       id: 'a',
       label: 'Off',
@@ -27,11 +27,11 @@ export default Ember.Controller.extend({
       label: 'On',
       value: 'on'
     }
-  ],
+  ]),
 
   switchAValue: 'off',
 
-  switchBOptions: [
+  switchBOptions: Ember.A([
     {
       id: 'b',
       label: 'Off',
@@ -41,11 +41,11 @@ export default Ember.Controller.extend({
       label: 'On',
       value: 'on'
     }
-  ],
+  ]),
 
   switchBValue: 'off',
 
-  switchCOptions: [
+  switchCOptions: Ember.A([
     {
       id: 'c',
       label: 'Off',
@@ -55,11 +55,11 @@ export default Ember.Controller.extend({
       label: 'On',
       value: 'on'
     }
-  ],
+  ]),
 
   switchCValue: 'off',
 
-  switchDOptions: [
+  switchDOptions: Ember.A([
     {
       id: 'd',
       label: 'Off',
@@ -69,7 +69,7 @@ export default Ember.Controller.extend({
       label: 'On',
       value: 'on'
     }
-  ],
+  ]),
 
   switchDValue: 'off'
 });
