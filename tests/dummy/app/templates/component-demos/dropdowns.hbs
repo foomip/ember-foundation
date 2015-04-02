@@ -22,7 +22,7 @@
   <div class="large-6 columns">
     <h4>Rendered Component</h4>
 
-    {{#f-button dropdown="dropdownDemo1"}}Link Dropdown &raquo;{{/f-button}}
+    {{#f-button dropdownId="dropdownDemo1"}}Link Dropdown &raquo;{{/f-button}}
 
     {{#f-dropdown id="dropdownDemo1"}}
       <li><a>This is a link</a></li>
@@ -48,12 +48,12 @@
   <div class="large-6 columns">
     <h4>Rendered Component</h4>
 
+    {{#f-button dropdownId="dropdownDemo2"}}Content Dropdown &raquo;{{/f-button}}
+
     {{#f-dropdown content=true id="dropdownDemo2"}}
       <h4>Title</h4>
       <p>Some text that people will think is awesome!</p>
     {{/f-dropdown}}
-
-    {{#f-button dropdown="dropdownDemo2"}}Content Dropdown &raquo;{{/f-button}}
   </div>
 </div>
 

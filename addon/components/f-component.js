@@ -5,7 +5,9 @@ export default Ember.Component.extend({
 
   'data-options': Ember.computed.alias('options'),
 
-  initFoundation: Ember.on('didInsertElement', () => {
-    Ember.$(document).foundation();
+  initFoundation: Ember.on('didInsertElement', function () {
+    Ember.run.next(() => {
+      Ember.$(document).foundation();
+    });
   })
 });
