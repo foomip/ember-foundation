@@ -1121,7 +1121,7 @@ define('dummy/templates/application', ['exports'], function (exports) {
         var el4 = dom.createTextNode("\n      ");
         dom.appendChild(el3, el4);
         var el4 = dom.createElement("li");
-        dom.setAttribute(el4,"class","has-dropdown");
+        dom.setAttribute(el4,"class","has-dropdown not-click");
         var el5 = dom.createTextNode("\n        ");
         dom.appendChild(el4, el5);
         var el5 = dom.createComment("");
@@ -3301,19 +3301,7 @@ define('dummy/templates/component-demos/dropdowns', ['exports'], function (expor
         hasRendered: false,
         build: function build(dom) {
           var el0 = dom.createDocumentFragment();
-          var el1 = dom.createTextNode("      ");
-          dom.appendChild(el0, el1);
-          var el1 = dom.createElement("h4");
-          var el2 = dom.createTextNode("Title");
-          dom.appendChild(el1, el2);
-          dom.appendChild(el0, el1);
-          var el1 = dom.createTextNode("\n      ");
-          dom.appendChild(el0, el1);
-          var el1 = dom.createElement("p");
-          var el2 = dom.createTextNode("Some text that people will think is awesome!");
-          dom.appendChild(el1, el2);
-          dom.appendChild(el0, el1);
-          var el1 = dom.createTextNode("\n");
+          var el1 = dom.createTextNode("Content Dropdown »");
           dom.appendChild(el0, el1);
           return el0;
         },
@@ -3349,7 +3337,19 @@ define('dummy/templates/component-demos/dropdowns', ['exports'], function (expor
         hasRendered: false,
         build: function build(dom) {
           var el0 = dom.createDocumentFragment();
-          var el1 = dom.createTextNode("Content Dropdown »");
+          var el1 = dom.createTextNode("      ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createElement("h4");
+          var el2 = dom.createTextNode("Title");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n      ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createElement("p");
+          var el2 = dom.createTextNode("Some text that people will think is awesome!");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
           dom.appendChild(el0, el1);
           return el0;
         },
@@ -3494,15 +3494,15 @@ define('dummy/templates/component-demos/dropdowns', ['exports'], function (expor
         var el4 = dom.createTextNode("Rendered Component");
         dom.appendChild(el3, el4);
         dom.appendChild(el2, el3);
+        var el3 = dom.createTextNode("\n\n    ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n\n");
         dom.appendChild(el2, el3);
         var el3 = dom.createComment("");
         dom.appendChild(el2, el3);
-        var el3 = dom.createTextNode("\n    ");
-        dom.appendChild(el2, el3);
-        var el3 = dom.createComment("");
-        dom.appendChild(el2, el3);
-        var el3 = dom.createTextNode("\n  ");
+        var el3 = dom.createTextNode("  ");
         dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n");
@@ -3608,10 +3608,10 @@ define('dummy/templates/component-demos/dropdowns', ['exports'], function (expor
         var morph1 = dom.createMorphAt(element0,5,5);
         var morph2 = dom.createMorphAt(element1,3,3);
         var morph3 = dom.createMorphAt(element1,5,5);
-        block(env, morph0, context, "f-button", [], {"dropdown": "dropdownDemo1"}, child0, null);
+        block(env, morph0, context, "f-button", [], {"dropdownId": "dropdownDemo1"}, child0, null);
         block(env, morph1, context, "f-dropdown", [], {"id": "dropdownDemo1"}, child1, null);
-        block(env, morph2, context, "f-dropdown", [], {"content": true, "id": "dropdownDemo2"}, child2, null);
-        block(env, morph3, context, "f-button", [], {"dropdown": "dropdownDemo2"}, child3, null);
+        block(env, morph2, context, "f-button", [], {"dropdownId": "dropdownDemo2"}, child2, null);
+        block(env, morph3, context, "f-dropdown", [], {"content": true, "id": "dropdownDemo2"}, child3, null);
         return fragment;
       }
     };
@@ -14328,7 +14328,7 @@ catch(err) {
 if (runningTests) {
   require("dummy/tests/test-helper");
 } else {
-  require("dummy/app")["default"].create({"name":"ember-foundation","version":"0.5.0"});
+  require("dummy/app")["default"].create({"name":"ember-foundation","version":"0.5.0.a98b70c1"});
 }
 
 /* jshint ignore:end */

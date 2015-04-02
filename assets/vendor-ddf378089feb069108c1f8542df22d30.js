@@ -57526,7 +57526,9 @@ define('ember-foundation/components/f-component', ['exports', 'ember'], function
     "data-options": Ember['default'].computed.alias("options"),
 
     initFoundation: Ember['default'].on("didInsertElement", function () {
-      Ember['default'].$(document).foundation();
+      Ember['default'].run.next(function () {
+        Ember['default'].$(document).foundation();
+      });
     })
   });
 
