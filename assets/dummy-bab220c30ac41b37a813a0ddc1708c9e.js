@@ -6736,6 +6736,23 @@ define('dummy/templates/component-demos/tabs', ['exports'], function (exports) {
         var el2 = dom.createTextNode("\n  ");
         dom.appendChild(el1, el2);
         var el2 = dom.createElement("dt");
+        var el3 = dom.createTextNode("activeTabId ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createElement("span");
+        dom.setAttribute(el3,"class","label secondary");
+        var el4 = dom.createTextNode("string");
+        dom.appendChild(el3, el4);
+        dom.appendChild(el2, el3);
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode("\n  ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createElement("dd");
+        var el3 = dom.createTextNode("The ID of the tab to initially set as active.");
+        dom.appendChild(el2, el3);
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode("\n\n  ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createElement("dt");
         var el3 = dom.createTextNode("id ");
         dom.appendChild(el2, el3);
         var el3 = dom.createElement("span");
@@ -6813,7 +6830,7 @@ define('dummy/templates/component-demos/tabs', ['exports'], function (exports) {
           fragment = this.build(dom);
         }
         var morph0 = dom.createMorphAt(dom.childAt(fragment, [8, 3]),3,3);
-        block(env, morph0, context, "f-tab-panel", [], {}, child0, null);
+        block(env, morph0, context, "f-tab-panel", [], {"activeTabId": "demoTab1"}, child0, null);
         return fragment;
       }
     };
@@ -8525,10 +8542,15 @@ define('dummy/templates/components/f-tab-panel', ['exports'], function (exports)
           var el0 = dom.createDocumentFragment();
           var el1 = dom.createTextNode("    ");
           dom.appendChild(el0, el1);
-          var el1 = dom.createElement("dd");
+          var el1 = dom.createElement("li");
+          dom.setAttribute(el1,"class","tab-title");
+          var el2 = dom.createTextNode("\n      ");
+          dom.appendChild(el1, el2);
           var el2 = dom.createElement("a");
           var el3 = dom.createComment("");
           dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n    ");
           dom.appendChild(el1, el2);
           dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n");
@@ -8555,7 +8577,7 @@ define('dummy/templates/components/f-tab-panel', ['exports'], function (exports)
           } else {
             fragment = this.build(dom);
           }
-          var element0 = dom.childAt(fragment, [1, 0]);
+          var element0 = dom.childAt(fragment, [1, 1]);
           var morph0 = dom.createMorphAt(element0,0,0);
           element(env, element0, context, "bind-attr", [], {"href": get(env, context, "tab.href")});
           content(env, morph0, context, "tab.title");
@@ -8571,7 +8593,7 @@ define('dummy/templates/components/f-tab-panel', ['exports'], function (exports)
       hasRendered: false,
       build: function build(dom) {
         var el0 = dom.createDocumentFragment();
-        var el1 = dom.createElement("dl");
+        var el1 = dom.createElement("ul");
         dom.setAttribute(el1,"class","tabs");
         dom.setAttribute(el1,"data-tab","");
         var el2 = dom.createTextNode("\n");
@@ -14328,7 +14350,7 @@ catch(err) {
 if (runningTests) {
   require("dummy/tests/test-helper");
 } else {
-  require("dummy/app")["default"].create({"name":"ember-foundation","version":"0.5.0.a98b70c1"});
+  require("dummy/app")["default"].create({"name":"ember-foundation","version":"0.6.0"});
 }
 
 /* jshint ignore:end */
