@@ -27,7 +27,7 @@
 
   <div class="large-6 columns">
     <h4>Rendered Component</h4>
-    {{#f-tab-panel}}
+    {{#f-tab-panel activeTabId="demoTab1"}}
 
       {{#f-tab-pane id="demoTab1" title="Tab 1"}}
         <p>First tab content</p>
@@ -50,6 +50,9 @@
 <h3>F-Tab-Pane Properties</h3>
 
 <dl>
+  <dt>activeTabId <span class="label secondary">string</span></dt>
+  <dd>The ID of the tab to initially set as active.</dd>
+
   <dt>id <span class="label secondary">string</span> <span class="label alert">required</span></dt>
   <dd><code>id</code> attribute value.</dd>
 

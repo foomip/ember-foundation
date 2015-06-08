@@ -45,7 +45,7 @@
     "ember-disable-prototype-extensions": "^1.0.0"
   },
   "dependencies": {
-    "broccoli-sass": "^0.6.2",
+    "broccoli-sass": "^0.6.6",
     "ember-cli-babel": "^4.0.0"
   }
 }

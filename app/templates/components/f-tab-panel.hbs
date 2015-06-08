@@ -1,8 +1,10 @@
-<dl class="tabs" data-tab>
+<ul class="tabs" data-tab>
   {{#each tab in tabs}}
-    <dd><a {{bind-attr href=tab.href}}>{{tab.title}}</a></dd>
+    <li class="tab-title">
+      <a {{bind-attr href=tab.href}}>{{tab.title}}</a>
+    </li>
   {{/each}}
-</dl>
+</ul>
 
 <div class="tabs-content">
   {{yield}}
