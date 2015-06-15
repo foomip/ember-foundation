@@ -1,4 +1,5 @@
 import FComponent from './f-component';
+import layout from '../templates/components/f-clearing';
 
 export default FComponent.extend({
   attributeBindings: ['data-clearing'],
@@ -8,6 +9,8 @@ export default FComponent.extend({
   classNames: ['clearing-thumbs'],
 
   'data-clearing': '',
+
+  layout,
 
   tagName: 'ul'
 });

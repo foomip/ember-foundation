@@ -1,5 +1,6 @@
 import Ember from 'ember';
 import FComponent from './f-component';
+import layout from '../templates/components/f-joyride';
 
 export default FComponent.extend({
   attributeBindings: ['data-joyride', 'style'],
@@ -7,6 +8,8 @@ export default FComponent.extend({
   'data-joyride': '',
 
   // TODO: Add "start" clear when joyride is closed
+
+  layout,
 
   start: false,
 

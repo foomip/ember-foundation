@@ -1,5 +1,6 @@
 import Ember from 'ember';
 import FComponent from './f-component';
+import layout from '../templates/components/f-dropdown';
 
 export default FComponent.extend({
   'aria-hidden': 'true',
@@ -25,6 +26,8 @@ export default FComponent.extend({
 
     Ember.set(this, 'tagName', 'ul');
   }),
+
+  layout,
 
   tabindex: -1
 });

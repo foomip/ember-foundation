@@ -1,12 +1,19 @@
 import Ember from 'ember';
 import FComponent from './f-component';
+import layout from '../templates/components/f-slider';
 
 export default FComponent.extend({
-  attributeBindings: ['data-slider'],
+  attributeBindings: [
+    'data-slider'
+  ],
 
-  classNames: ['range-slider'],
+  classNames: [
+    'range-slider'
+  ],
 
   'data-slider': '',
+
+  layout,
 
   setup: Ember.observer('didInsertElement', function () {
     var slider = Ember.$(this);

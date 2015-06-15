@@ -1,5 +1,6 @@
 import Ember from 'ember';
 import FComponent from './f-component';
+import layout from '../templates/components/f-breadcrumbs';
 
 export default FComponent.extend({
   applicationController: null,
@@ -43,6 +44,8 @@ export default FComponent.extend({
   handlerInfos: Ember.computed('applicationController.currentPath', function () {
     return Ember.get(this, 'router.router.currentHandlerInfos');
   }),
+
+  layout,
 
   tagName: 'ul',
 

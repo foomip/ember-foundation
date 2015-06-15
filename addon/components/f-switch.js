@@ -1,5 +1,6 @@
 import Ember from 'ember';
 import FComponent from './f-component';
+import layout from '../templates/components/f-switch';
 
 export default FComponent.extend({
   classNames: ['switch'],
@@ -7,6 +8,8 @@ export default FComponent.extend({
   inputId: Ember.computed('elementId', function () {
     return Ember.get(this, 'elementId') + '-input';
   }),
+
+  layout,
 
   tagName: 'fieldset',
 

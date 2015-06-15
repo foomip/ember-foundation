@@ -1,5 +1,6 @@
 import Ember from 'ember';
 import FComponent from './f-component';
+import layout from '../templates/components/f-pagination';
 
 export default FComponent.extend({
   actions: {
@@ -33,11 +34,18 @@ export default FComponent.extend({
 
   'aria-label': 'Pagination',
 
-  attributeBindings: ['aria-label', 'role'],
+  attributeBindings: [
+    'aria-label',
+    'role'
+  ],
 
-  classNames: ['pagination'],
+  classNames: [
+    'pagination'
+  ],
 
   currentPage: 0,
+
+  layout,
 
   onFirstPage: Ember.computed('currentPage', function () {
     return Ember.get(this, 'currentPage') === 1;

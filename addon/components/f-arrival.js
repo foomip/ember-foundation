@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import layout from '../templates/components/f-arrival';
 
 export default Ember.Component.extend({
   attributeBindings: ['data-magellan-arrival'],
@@ -6,6 +7,8 @@ export default Ember.Component.extend({
   'data-magellan-arrival': Ember.computed('name', function () {
     return Ember.get(this, 'name');
   }),
+
+  layout,
 
   name: null,
 
