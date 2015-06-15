@@ -1,7 +1,7 @@
 <ul class="tabs" data-tab>
-  {{#each tab in tabs}}
+  {{#each tabs as |tab|}}
     <li class="tab-title">
-      <a {{bind-attr href=tab.href}}>{{tab.title}}</a>
+      <a href={{tab.href}}>{{tab.title}}</a>
     </li>
   {{/each}}
 </ul>

@@ -1,5 +1,5 @@
-{{#each crumb in breadCrumbs}}
-  <li {{bind-attr class="crumb.isCurrent:current:"}}>
+{{#each breadCrumbs as |crumb|}}
+  <li class="{{if crumb.isCurrent 'current'}}">
     {{#link-to crumb.path}}
       {{crumb.name}}
     {{/link-to}}
