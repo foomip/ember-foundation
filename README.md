@@ -44,6 +44,6 @@ app.import('bower_components/foundation/css/foundation.css');
 
 ## Component Documentation Pages
 
-The tests/dummy app included in this repository includes demos and examples for all of the Ember-based components. You can view this app at its public location, [Ember-Foundation](http://joshforisha.github.io/ember-foundation). To build the app yourself, simply run `ember serve` or `ember build` from the root folder of this addon.
+The tests/dummy app included in this repository includes demos and examples for all of the Ember-based components. You can view this app at its public location, [Ember-Foundation](http://joshforisha.github.io/ember-foundation).
 
-Note that you will need to have the development dependencies installed for the addon, so an `npm install` and `bower install` might be necessary as well.
+To build the dummy app yourself, simply run `ember serve` or `ember build` from the root folder of this addon. Note that you will need to have the development dependencies installed for the addon, so you'll need to run `npm install` and `bower install` as well.
