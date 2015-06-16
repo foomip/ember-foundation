@@ -17,12 +17,6 @@ Within an ember-cli app, run:
 ember install ember-foundation
 ```
 
-Next, run the blueprint for ember-foundation:
-
-```sh
-ember generate ember-foundation
-```
-
 ## Stylesheets
 
 ### Using SASS
