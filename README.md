@@ -7,6 +7,10 @@
 
 An Ember CLI addon for components using the Zurb Foundation 5 library
 
+## Warning!
+
+Please note that I am no longer maintaining this repo. If you'd like ownership of it, let me know.
+
 ## Install
 
 Within an ember-cli app, run:
